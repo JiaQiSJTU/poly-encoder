@@ -1,0 +1,661 @@
+[ optional arguments: ] 
+[  share_word_embeddings: False ]
+[ Main ParlAI Arguments: ] 
+[  batchsize: 256 ]
+[  datapath: /lustre/home/acct-eezql/eezql/angel/ParlAI/data ]
+[  datatype: train ]
+[  download_path: /lustre/home/acct-eezql/eezql/angel/ParlAI/downloads ]
+[  hide_labels: False ]
+[  image_mode: raw ]
+[  init_opt: None ]
+[  multitask_weights: [1] ]
+[  numthreads: 1 ]
+[  show_advanced_args: False ]
+[  task: None ]
+[ ParlAI Model Arguments: ] 
+[  dict_class: parlai.core.dict:DictionaryAgent ]
+[  init_model: zoo:pretrained_transformers/poly_model_huge_reddit/model ]
+[  model: transformer/polyencoder ]
+[  model_file: ./model/poly_dstc7_model ]
+[ Training Loop Arguments: ] 
+[  aggregate_micro: False ]
+[  display_examples: False ]
+[  eval_batchsize: 10 ]
+[  evaltask: None ]
+[  load_from_checkpoint: False ]
+[  max_train_time: -1 ]
+[  metrics: default ]
+[  num_epochs: -1 ]
+[  save_after_valid: True ]
+[  save_every_n_secs: -1 ]
+[  short_final_eval: False ]
+[  validation_cutoff: 1.0 ]
+[  validation_every_n_epochs: 0.5 ]
+[  validation_every_n_secs: -1 ]
+[  validation_max_exs: -1 ]
+[  validation_metric: accuracy ]
+[  validation_metric_mode: max ]
+[  validation_patience: 5 ]
+[  validation_share_agent: False ]
+[ Tensorboard Arguments: ] 
+[  tensorboard_log: False ]
+[ PytorchData Arguments: ] 
+[  batch_length_range: 5 ]
+[  batch_sort_cache_type: pop ]
+[  batch_sort_field: text ]
+[  numworkers: 4 ]
+[  pytorch_context_length: -1 ]
+[  pytorch_datapath: None ]
+[  pytorch_include_labels: True ]
+[  pytorch_preprocess: False ]
+[  pytorch_teacher_batch_sort: False ]
+[  pytorch_teacher_dataset: None ]
+[  pytorch_teacher_task: dstc7 ]
+[  shuffle: False ]
+[ Dictionary Loop Arguments: ] 
+[  dict_include_test: False ]
+[  dict_include_valid: False ]
+[  dict_maxexs: -1 ]
+[  log_every_n_secs: 20.0 ]
+[ ParlAI Image Preprocessing Arguments: ] 
+[  image_cropsize: 224 ]
+[  image_size: 256 ]
+[ TorchAgent Arguments: ] 
+[  add_p1_after_newln: False ]
+[  delimiter: 
+ ]
+[  embedding_projection: random ]
+[  embedding_type: random ]
+[  fp16: False ]
+[  gpu: -1 ]
+[  history_size: 20 ]
+[  interactive_mode: False ]
+[  label_truncate: 72 ]
+[  no_cuda: False ]
+[  person_tokens: False ]
+[  rank_candidates: False ]
+[  split_lines: False ]
+[  text_truncate: 360 ]
+[  truncate: 1024 ]
+[  use_reply: label ]
+[ Optimizer Arguments: ] 
+[  adam_eps: 1e-08 ]
+[  betas: (0.9, 0.999) ]
+[  gradient_clip: 0.1 ]
+[  learningrate: 5e-05 ]
+[  momentum: 0 ]
+[  nesterov: True ]
+[  nus: (0.7,) ]
+[  optimizer: adamax ]
+[  weight_decay: None ]
+[ Learning Rate Scheduler: ] 
+[  lr_scheduler: reduceonplateau ]
+[  lr_scheduler_decay: 0.4 ]
+[  lr_scheduler_patience: 0 ]
+[  update_freq: 1 ]
+[  warmup_rate: 0.0001 ]
+[  warmup_updates: 100 ]
+[ TorchRankerAgent: ] 
+[  candidates: batch ]
+[  cap_num_predictions: 100 ]
+[  encode_candidate_vecs: True ]
+[  encode_candidate_vecs_batchsize: 256 ]
+[  eval_candidates: inline ]
+[  fixed_candidate_vecs: reuse ]
+[  fixed_candidates_path: None ]
+[  ignore_bad_candidates: False ]
+[  inference: max ]
+[  init_model: zoo:pretrained_transformers/poly_model_huge_reddit/model ]
+[  rank_top_k: -1 ]
+[  repeat_blocking_heuristic: True ]
+[  topk: 5 ]
+[  train_predict: False ]
+[ Transformer Arguments: ] 
+[  activation: gelu ]
+[  attention_dropout: 0.1 ]
+[  data_parallel: True ]
+[  dropout: 0.1 ]
+[  embedding_size: 768 ]
+[  embeddings_scale: False ]
+[  ffn_size: 3072 ]
+[  learn_embeddings: True ]
+[  learn_positional_embeddings: True ]
+[  memory_attention: sqrt ]
+[  n_heads: 12 ]
+[  n_layers: 12 ]
+[  n_positions: 1024 ]
+[  n_segments: 2 ]
+[  normalize_sent_emb: False ]
+[  output_scaling: 0.06 ]
+[  reduction_type: mean ]
+[  relu_dropout: 0.0 ]
+[  share_encoders: False ]
+[  use_memories: False ]
+[  variant: xlm ]
+[  wrap_memory_encoder: False ]
+[ Dictionary Arguments: ] 
+[  bpe_debug: False ]
+[  dict_endtoken: __start__ ]
+[  dict_file: None ]
+[  dict_initpath: None ]
+[  dict_language: english ]
+[  dict_lower: True ]
+[  dict_max_ngram_size: -1 ]
+[  dict_maxtokens: -1 ]
+[  dict_minfreq: 0 ]
+[  dict_nulltoken: __null__ ]
+[  dict_starttoken: __start__ ]
+[  dict_textfields: text,labels ]
+[  dict_tokenizer: bpe ]
+[  dict_unktoken: __unk__ ]
+[ Polyencoder Arguments: ] 
+[  codes_attention_num_heads: 4 ]
+[  codes_attention_type: basic ]
+[  poly_attention_num_heads: 4 ]
+[  poly_attention_type: basic ]
+[  poly_n_codes: 64 ]
+[  polyencoder_attention_keys: context ]
+[  polyencoder_type: codes ]
+[ Current ParlAI commit: d57786d9eb1f5225a95770749ae02468136dcb43 ]
+[ building dictionary first... ]
+Dictionary: loading dictionary from /lustre/home/acct-eezql/eezql/angel/ParlAI/data/dstc7_pyt_data/train/dict
+[ num words =  29042 ]
+[ dictionary already built .]
+[ no model with opt yet at: ./model/poly_dstc7_model(.opt) ]
+
+***************************************************************************
+[ WARNING ] : your model is being loaded with opts that do not exist in the model you are initializing the weights with: evaltask: None,eval_batchsize: 10,display_examples: False,num_epochs: -1,max_train_time: -1,validation_every_n_secs: -1,save_every_n_secs: -1,save_after_valid: True,validation_every_n_epochs: 0.5,validation_max_exs: -1,short_final_eval: False,validation_patience: 5,validation_metric: accuracy,validation_metric_mode: max,validation_cutoff: 1.0,load_from_checkpoint: False,validation_share_agent: False,aggregate_micro: False,metrics: default,tensorboard_log: False,pytorch_teacher_task: dstc7,pytorch_teacher_dataset: None,pytorch_datapath: None,numworkers: 4,pytorch_preprocess: False,pytorch_teacher_batch_sort: False,batch_sort_cache_type: pop,batch_length_range: 5,shuffle: False,batch_sort_field: text,pytorch_context_length: -1,pytorch_include_labels: True,dict_maxexs: -1,dict_include_valid: False,dict_include_test: False,log_every_n_secs: 20.0,interactive_mode: False,adam_eps: 1e-08,encode_candidate_vecs_batchsize: 256,rank_top_k: -1,inference: max,topk: 5,polyencoder_attention_keys: context
+
+***************************************************************************
+[ WARNING ] : your model is being loaded with opts that differ from the model you are initializing the weights with. Add the following args to your run command to change this: 
+
+--task convai2 --download-path /private/home/edinan/ParlAI/downloads --batchsize 2 --datapath /private/home/edinan/ParlAI/data --single-turn False --fp16 True --rank-candidates True --encode-candidate-vecs False --share-word-embeddings True --polyencoder-type n-first --parlai-home /private/home/edinan/ParlAI
+***************************************************************************
+[ Using CUDA ]
+Dictionary: loading dictionary from /lustre/home/acct-eezql/eezql/angel/ParlAI/data/models/pretrained_transformers/poly_model_huge_reddit/model.dict
+[ num words =  54944 ]
+Total parameters: 256131072
+Trainable parameters:  256131072
+Loading existing model parameters from /lustre/home/acct-eezql/eezql/angel/ParlAI/data/models/pretrained_transformers/poly_model_huge_reddit/model
+WARNING: not loading optim state since model params changed.
+[creating task(s): pytorch_teacher]
+[ dictionary already built .]
+[ no model with opt yet at: ./model/poly_dstc7_model(.opt) ]
+
+***************************************************************************
+[ WARNING ] : your model is being loaded with opts that do not exist in the model you are initializing the weights with: evaltask: None,eval_batchsize: 10,display_examples: False,num_epochs: -1,max_train_time: -1,validation_every_n_secs: -1,save_every_n_secs: -1,save_after_valid: True,validation_every_n_epochs: 0.5,validation_max_exs: -1,short_final_eval: False,validation_patience: 5,validation_metric: accuracy,validation_metric_mode: max,validation_cutoff: 1.0,load_from_checkpoint: False,validation_share_agent: False,aggregate_micro: False,metrics: default,tensorboard_log: False,pytorch_teacher_task: dstc7,pytorch_teacher_dataset: None,pytorch_datapath: None,numworkers: 4,pytorch_preprocess: False,pytorch_teacher_batch_sort: False,batch_sort_cache_type: pop,batch_length_range: 5,shuffle: False,batch_sort_field: text,pytorch_context_length: -1,pytorch_include_labels: True,dict_maxexs: -1,dict_include_valid: False,dict_include_test: False,log_every_n_secs: 20.0,interactive_mode: False,adam_eps: 1e-08,encode_candidate_vecs_batchsize: 256,rank_top_k: -1,inference: max,topk: 5,polyencoder_attention_keys: context,batch_sort: False
+
+***************************************************************************
+[ WARNING ] : your model is being loaded with opts that differ from the model you are initializing the weights with. Add the following args to your run command to change this: 
+
+--task convai2 --download-path /private/home/edinan/ParlAI/downloads --batchsize 2 --datapath /private/home/edinan/ParlAI/data --single-turn False --fp16 True --encode-candidate-vecs False --share-word-embeddings True --polyencoder-type n-first --parlai-home /private/home/edinan/ParlAI
+***************************************************************************
+[ Using CUDA ]
+Dictionary: loading dictionary from /lustre/home/acct-eezql/eezql/angel/ParlAI/data/models/pretrained_transformers/poly_model_huge_reddit/model.dict
+[ num words =  54944 ]
+Total parameters: 256131072
+Trainable parameters:  256131072
+Loading existing model parameters from /lustre/home/acct-eezql/eezql/angel/ParlAI/data/models/pretrained_transformers/poly_model_huge_reddit/model
+WARNING: not loading optim state since model params changed.
+[creating task(s): dstc7]
+[ pytorch data already built, at /lustre/home/acct-eezql/eezql/angel/ParlAI/data/dstc7_pyt_data/train. ]
+[ training... ]
+[ time:33.0s total_exs:256 epochs:0.0 ] {'exs': 256, 'lr': 5.05e-07, 'total_train_updates': 1, 'gnorm': 93530.0, 'clip': 1.0, 'gpu_mem_percent': 0.747, 'examples': 256, 'loss': 3773.0, 'mean_loss': 14.74, 'mean_rank': 94.77, 'mrr': 0.05667, 'train_accuracy': 0.02344}
+[ time:54.0s total_exs:3072 epochs:0.03 ] {'exs': 2816, 'lr': 6.004e-06, 'total_train_updates': 12, 'gnorm': 91160.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 30480.0, 'mean_loss': 10.82, 'mean_rank': 86.21, 'mrr': 0.06193, 'train_accuracy': 0.01918}
+[ time:76.0s total_exs:6144 epochs:0.06 ] {'exs': 3072, 'lr': 1.2e-05, 'total_train_updates': 24, 'gnorm': 16110.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 18620.0, 'mean_loss': 6.062, 'mean_rank': 72.12, 'mrr': 0.1147, 'train_accuracy': 0.05306}
+[ time:96.0s total_exs:8960 epochs:0.09 ] {'exs': 2816, 'lr': 1.75e-05, 'total_train_updates': 35, 'gnorm': 9453.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 14600.0, 'mean_loss': 5.185, 'mean_rank': 65.25, 'mrr': 0.1595, 'train_accuracy': 0.08558}
+[ time:118.0s total_exs:12032 epochs:0.12 ] {'exs': 3072, 'lr': 2.35e-05, 'total_train_updates': 47, 'gnorm': 6077.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 14380.0, 'mean_loss': 4.681, 'mean_rank': 53.46, 'mrr': 0.2179, 'train_accuracy': 0.1377}
+[ time:140.0s total_exs:15104 epochs:0.15 ] {'exs': 3072, 'lr': 2.95e-05, 'total_train_updates': 59, 'gnorm': 5059.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 12990.0, 'mean_loss': 4.23, 'mean_rank': 41.73, 'mrr': 0.2981, 'train_accuracy': 0.2103}
+[ time:162.0s total_exs:18176 epochs:0.18 ] {'exs': 3072, 'lr': 3.55e-05, 'total_train_updates': 71, 'gnorm': 4998.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 12510.0, 'mean_loss': 4.071, 'mean_rank': 38.61, 'mrr': 0.3223, 'train_accuracy': 0.2363}
+[ time:183.0s total_exs:21248 epochs:0.21 ] {'exs': 3072, 'lr': 4.15e-05, 'total_train_updates': 83, 'gnorm': 4970.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 11980.0, 'mean_loss': 3.899, 'mean_rank': 35.83, 'mrr': 0.3469, 'train_accuracy': 0.2575}
+[ time:204.0s total_exs:24064 epochs:0.24 ] {'exs': 2816, 'lr': 4.7e-05, 'total_train_updates': 94, 'gnorm': 4961.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 10470.0, 'mean_loss': 3.718, 'mean_rank': 31.57, 'mrr': 0.3717, 'train_accuracy': 0.2727}
+[ time:225.0s total_exs:27136 epochs:0.27 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 106, 'gnorm': 5485.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 11060.0, 'mean_loss': 3.599, 'mean_rank': 28.5, 'mrr': 0.4003, 'train_accuracy': 0.3086}
+[ time:247.0s total_exs:30208 epochs:0.3 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 118, 'gnorm': 5202.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 11240.0, 'mean_loss': 3.659, 'mean_rank': 30.06, 'mrr': 0.3828, 'train_accuracy': 0.2904}
+[ time:268.0s total_exs:33280 epochs:0.33 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 130, 'gnorm': 4992.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 10880.0, 'mean_loss': 3.543, 'mean_rank': 27.85, 'mrr': 0.4051, 'train_accuracy': 0.3118}
+[ time:288.0s total_exs:36096 epochs:0.36 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 141, 'gnorm': 4828.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 9914.0, 'mean_loss': 3.521, 'mean_rank': 27.63, 'mrr': 0.4038, 'train_accuracy': 0.31}
+[ time:309.0s total_exs:39168 epochs:0.39 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 153, 'gnorm': 4781.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 10650.0, 'mean_loss': 3.466, 'mean_rank': 26.48, 'mrr': 0.4145, 'train_accuracy': 0.3206}
+[ time:330.0s total_exs:41984 epochs:0.42 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 164, 'gnorm': 4896.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 9507.0, 'mean_loss': 3.376, 'mean_rank': 24.87, 'mrr': 0.428, 'train_accuracy': 0.332}
+[ time:350.0s total_exs:45056 epochs:0.45 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 176, 'gnorm': 4991.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 10250.0, 'mean_loss': 3.337, 'mean_rank': 24.07, 'mrr': 0.4309, 'train_accuracy': 0.333}
+[ time:371.0s total_exs:47872 epochs:0.48 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 187, 'gnorm': 4847.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 9503.0, 'mean_loss': 3.375, 'mean_rank': 24.65, 'mrr': 0.4253, 'train_accuracy': 0.3306}
+[creating task(s): dstc7]
+[ running eval: valid ]
+[ eval completed in 349.06s ]
+valid:{'exs': 5000, 'accuracy': 0.4432, 'f1': 0.4672, 'hits@1': 0.443, 'hits@5': 0.663, 'hits@10': 0.762, 'hits@50': 0.96, 'hits@100': 1.0, 'bleu-4': 0.3974, 'lr': 5e-05, 'total_train_updates': 196, 'gpu_mem_percent': 0.755, 'examples': 5000, 'loss': 12310.0, 'mean_loss': 2.462, 'mean_rank': 9.232, 'mrr': 0.548}
+[ saving model checkpoint: ./model/poly_dstc7_model.checkpoint ]
+Dictionary: saving dictionary to ./model/poly_dstc7_model.checkpoint.dict
+[ new best accuracy: 0.4432 ]
+[ saving best valid model: ./model/poly_dstc7_model ]
+Dictionary: saving dictionary to ./model/poly_dstc7_model.dict
+[ saving best valid metric: ./model/poly_dstc7_model.best_valid ]
+[ time:754.0s total_exs:50432 epochs:0.5 ] {'exs': 2560, 'lr': 5e-05, 'total_train_updates': 197, 'gnorm': 5256.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 256, 'loss': 808.6, 'mean_loss': 3.159, 'mean_rank': 21.0, 'mrr': 0.4636, 'train_accuracy': 0.3789}
+[ time:775.0s total_exs:53504 epochs:0.54 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 209, 'gnorm': 4940.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 9868.0, 'mean_loss': 3.212, 'mean_rank': 22.2, 'mrr': 0.4538, 'train_accuracy': 0.3558}
+[ time:796.0s total_exs:56320 epochs:0.56 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 220, 'gnorm': 7112.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 9272.0, 'mean_loss': 3.293, 'mean_rank': 22.22, 'mrr': 0.4403, 'train_accuracy': 0.3406}
+[ time:817.0s total_exs:59392 epochs:0.59 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 232, 'gnorm': 5148.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 9815.0, 'mean_loss': 3.195, 'mean_rank': 21.68, 'mrr': 0.4562, 'train_accuracy': 0.361}
+[ time:838.0s total_exs:62464 epochs:0.62 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 244, 'gnorm': 4582.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 10050.0, 'mean_loss': 3.27, 'mean_rank': 22.74, 'mrr': 0.4399, 'train_accuracy': 0.3369}
+[ time:859.0s total_exs:65280 epochs:0.65 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 255, 'gnorm': 4636.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 9018.0, 'mean_loss': 3.202, 'mean_rank': 22.02, 'mrr': 0.457, 'train_accuracy': 0.3633}
+[ time:879.0s total_exs:68096 epochs:0.68 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 266, 'gnorm': 4653.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 8874.0, 'mean_loss': 3.151, 'mean_rank': 21.41, 'mrr': 0.461, 'train_accuracy': 0.3665}
+[ time:900.0s total_exs:71168 epochs:0.71 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 278, 'gnorm': 5714.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 9585.0, 'mean_loss': 3.12, 'mean_rank': 20.85, 'mrr': 0.4669, 'train_accuracy': 0.3717}
+[ time:922.0s total_exs:74240 epochs:0.74 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 290, 'gnorm': 4361.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 9700.0, 'mean_loss': 3.158, 'mean_rank': 21.04, 'mrr': 0.454, 'train_accuracy': 0.3558}
+[ time:943.0s total_exs:77312 epochs:0.77 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 302, 'gnorm': 4295.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 9631.0, 'mean_loss': 3.135, 'mean_rank': 21.01, 'mrr': 0.463, 'train_accuracy': 0.3652}
+[ time:964.0s total_exs:80128 epochs:0.8 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 313, 'gnorm': 4311.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 8726.0, 'mean_loss': 3.099, 'mean_rank': 20.46, 'mrr': 0.4667, 'train_accuracy': 0.3658}
+[ time:985.0s total_exs:82944 epochs:0.83 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 324, 'gnorm': 4407.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 8787.0, 'mean_loss': 3.12, 'mean_rank': 21.33, 'mrr': 0.4669, 'train_accuracy': 0.3711}
+[ time:1006.0s total_exs:86016 epochs:0.86 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 336, 'gnorm': 4850.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 9297.0, 'mean_loss': 3.026, 'mean_rank': 20.06, 'mrr': 0.4854, 'train_accuracy': 0.39}
+[ time:1028.0s total_exs:89088 epochs:0.89 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 348, 'gnorm': 5092.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 9403.0, 'mean_loss': 3.061, 'mean_rank': 20.18, 'mrr': 0.4757, 'train_accuracy': 0.3786}
+[ time:1048.0s total_exs:91904 epochs:0.92 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 359, 'gnorm': 5497.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 8371.0, 'mean_loss': 2.973, 'mean_rank': 17.29, 'mrr': 0.4791, 'train_accuracy': 0.3803}
+[ time:1068.0s total_exs:94720 epochs:0.95 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 370, 'gnorm': 5308.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 8690.0, 'mean_loss': 3.086, 'mean_rank': 19.87, 'mrr': 0.4684, 'train_accuracy': 0.3739}
+[ time:1088.0s total_exs:97536 epochs:0.98 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 381, 'gnorm': 5346.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 8526.0, 'mean_loss': 3.028, 'mean_rank': 19.46, 'mrr': 0.4771, 'train_accuracy': 0.3761}
+[ running eval: valid ]
+[ eval completed in 347.46s ]
+valid:{'exs': 5000, 'accuracy': 0.4854, 'f1': 0.507, 'hits@1': 0.485, 'hits@5': 0.707, 'hits@10': 0.805, 'hits@50': 0.974, 'hits@100': 1.0, 'bleu-4': 0.4332, 'lr': 5e-05, 'total_train_updates': 391, 'gpu_mem_percent': 0.755, 'examples': 5000, 'loss': 11010.0, 'mean_loss': 2.203, 'mean_rank': 7.475, 'mrr': 0.5907}
+[ saving model checkpoint: ./model/poly_dstc7_model.checkpoint ]
+[ new best accuracy: 0.4854 (previous best was 0.4432) ]
+[ saving best valid model: ./model/poly_dstc7_model ]
+[ saving best valid metric: ./model/poly_dstc7_model.best_valid ]
+[ time:1466.0s total_exs:100608 epochs:1.01 ] {'exs': 2720, 'lr': 5e-05, 'total_train_updates': 392, 'gnorm': 4285.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 256, 'loss': 781.8, 'mean_loss': 3.054, 'mean_rank': 20.07, 'mrr': 0.4884, 'train_accuracy': 0.4023}
+[ time:1486.0s total_exs:103424 epochs:1.03 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 403, 'gnorm': 4996.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 7922.0, 'mean_loss': 2.813, 'mean_rank': 16.23, 'mrr': 0.5089, 'train_accuracy': 0.408}
+[ time:1506.0s total_exs:106240 epochs:1.06 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 414, 'gnorm': 4374.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 7659.0, 'mean_loss': 2.72, 'mean_rank': 14.98, 'mrr': 0.5273, 'train_accuracy': 0.4272}
+[ time:1527.0s total_exs:109056 epochs:1.09 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 425, 'gnorm': 4395.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 7847.0, 'mean_loss': 2.787, 'mean_rank': 15.76, 'mrr': 0.5159, 'train_accuracy': 0.4162}
+[ time:1547.0s total_exs:111872 epochs:1.12 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 436, 'gnorm': 4591.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 7780.0, 'mean_loss': 2.763, 'mean_rank': 15.4, 'mrr': 0.5192, 'train_accuracy': 0.419}
+[ time:1568.0s total_exs:114944 epochs:1.15 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 448, 'gnorm': 4250.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 8518.0, 'mean_loss': 2.773, 'mean_rank': 16.34, 'mrr': 0.5171, 'train_accuracy': 0.4173}
+[ time:1590.0s total_exs:118016 epochs:1.18 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 460, 'gnorm': 4374.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 8502.0, 'mean_loss': 2.768, 'mean_rank': 15.25, 'mrr': 0.5128, 'train_accuracy': 0.4072}
+[ time:1611.0s total_exs:121088 epochs:1.21 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 472, 'gnorm': 4226.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 8550.0, 'mean_loss': 2.783, 'mean_rank': 15.62, 'mrr': 0.5115, 'train_accuracy': 0.4056}
+[ time:1631.0s total_exs:123904 epochs:1.24 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 483, 'gnorm': 4313.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 7616.0, 'mean_loss': 2.705, 'mean_rank': 15.07, 'mrr': 0.5285, 'train_accuracy': 0.4311}
+[ time:1653.0s total_exs:126976 epochs:1.27 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 495, 'gnorm': 4303.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 8269.0, 'mean_loss': 2.692, 'mean_rank': 14.93, 'mrr': 0.5315, 'train_accuracy': 0.4274}
+[ time:1674.0s total_exs:130048 epochs:1.3 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 507, 'gnorm': 4260.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 8378.0, 'mean_loss': 2.727, 'mean_rank': 15.51, 'mrr': 0.5262, 'train_accuracy': 0.4251}
+[ time:1696.0s total_exs:133120 epochs:1.33 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 519, 'gnorm': 4160.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 8239.0, 'mean_loss': 2.682, 'mean_rank': 14.63, 'mrr': 0.5344, 'train_accuracy': 0.4391}
+[ time:1716.0s total_exs:135936 epochs:1.36 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 530, 'gnorm': 4232.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 7543.0, 'mean_loss': 2.679, 'mean_rank': 14.48, 'mrr': 0.5321, 'train_accuracy': 0.4357}
+[ time:1736.0s total_exs:138752 epochs:1.39 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 541, 'gnorm': 4207.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 7458.0, 'mean_loss': 2.649, 'mean_rank': 13.92, 'mrr': 0.5318, 'train_accuracy': 0.4279}
+[ time:1757.0s total_exs:141824 epochs:1.42 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 553, 'gnorm': 4215.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 8147.0, 'mean_loss': 2.652, 'mean_rank': 13.96, 'mrr': 0.5327, 'train_accuracy': 0.4284}
+[ time:1779.0s total_exs:144896 epochs:1.45 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 565, 'gnorm': 4217.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 8119.0, 'mean_loss': 2.643, 'mean_rank': 14.21, 'mrr': 0.5382, 'train_accuracy': 0.4424}
+[ time:1800.0s total_exs:147968 epochs:1.48 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 577, 'gnorm': 4426.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 8263.0, 'mean_loss': 2.69, 'mean_rank': 15.26, 'mrr': 0.5281, 'train_accuracy': 0.432}
+[ running eval: valid ]
+[ eval completed in 347.30s ]
+valid:{'exs': 5000, 'accuracy': 0.5128, 'f1': 0.5331, 'hits@1': 0.513, 'hits@5': 0.743, 'hits@10': 0.834, 'hits@50': 0.976, 'hits@100': 1.0, 'bleu-4': 0.4588, 'lr': 5e-05, 'total_train_updates': 587, 'gpu_mem_percent': 0.755, 'examples': 5000, 'loss': 10300.0, 'mean_loss': 2.06, 'mean_rank': 6.693, 'mrr': 0.6184}
+[ saving model checkpoint: ./model/poly_dstc7_model.checkpoint ]
+[ new best accuracy: 0.5128 (previous best was 0.4854) ]
+[ saving best valid model: ./model/poly_dstc7_model ]
+[ saving best valid metric: ./model/poly_dstc7_model.best_valid ]
+[ time:2179.0s total_exs:150784 epochs:1.51 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 588, 'gnorm': 4273.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 256, 'loss': 675.8, 'mean_loss': 2.64, 'mean_rank': 13.32, 'mrr': 0.5421, 'train_accuracy': 0.4375}
+[ time:2199.0s total_exs:153600 epochs:1.54 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 599, 'gnorm': 4094.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 7602.0, 'mean_loss': 2.7, 'mean_rank': 15.27, 'mrr': 0.5303, 'train_accuracy': 0.4315}
+[ time:2220.0s total_exs:156672 epochs:1.57 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 611, 'gnorm': 4327.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 8130.0, 'mean_loss': 2.647, 'mean_rank': 13.95, 'mrr': 0.5331, 'train_accuracy': 0.4339}
+[ time:2243.0s total_exs:159744 epochs:1.6 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 623, 'gnorm': 4309.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 7902.0, 'mean_loss': 2.572, 'mean_rank': 14.05, 'mrr': 0.5504, 'train_accuracy': 0.4499}
+[ time:2264.0s total_exs:162816 epochs:1.63 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 635, 'gnorm': 3979.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 8285.0, 'mean_loss': 2.697, 'mean_rank': 14.78, 'mrr': 0.5283, 'train_accuracy': 0.4287}
+[ time:2284.0s total_exs:165632 epochs:1.66 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 646, 'gnorm': 4168.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 7320.0, 'mean_loss': 2.6, 'mean_rank': 13.72, 'mrr': 0.5431, 'train_accuracy': 0.4425}
+[ time:2304.0s total_exs:168448 epochs:1.68 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 657, 'gnorm': 4119.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 7318.0, 'mean_loss': 2.599, 'mean_rank': 14.09, 'mrr': 0.5454, 'train_accuracy': 0.4474}
+[ time:2325.0s total_exs:171520 epochs:1.72 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 669, 'gnorm': 4257.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 8151.0, 'mean_loss': 2.653, 'mean_rank': 14.4, 'mrr': 0.5322, 'train_accuracy': 0.4326}
+[ time:2347.0s total_exs:174592 epochs:1.75 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 681, 'gnorm': 4226.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 8080.0, 'mean_loss': 2.63, 'mean_rank': 14.27, 'mrr': 0.5405, 'train_accuracy': 0.4427}
+[ time:2368.0s total_exs:177664 epochs:1.78 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 693, 'gnorm': 4165.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 8044.0, 'mean_loss': 2.619, 'mean_rank': 13.7, 'mrr': 0.5359, 'train_accuracy': 0.4329}
+[ time:2388.0s total_exs:180480 epochs:1.8 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 704, 'gnorm': 4119.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 7211.0, 'mean_loss': 2.561, 'mean_rank': 12.86, 'mrr': 0.55, 'train_accuracy': 0.4545}
+[ time:2409.0s total_exs:183296 epochs:1.83 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 715, 'gnorm': 4136.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 7332.0, 'mean_loss': 2.604, 'mean_rank': 13.97, 'mrr': 0.5402, 'train_accuracy': 0.4382}
+[ time:2430.0s total_exs:186368 epochs:1.86 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 727, 'gnorm': 4127.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 8074.0, 'mean_loss': 2.628, 'mean_rank': 14.62, 'mrr': 0.5371, 'train_accuracy': 0.4352}
+[ time:2450.0s total_exs:189184 epochs:1.89 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 738, 'gnorm': 4270.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 6970.0, 'mean_loss': 2.475, 'mean_rank': 12.19, 'mrr': 0.5646, 'train_accuracy': 0.4663}
+[ time:2470.0s total_exs:192000 epochs:1.92 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 749, 'gnorm': 4171.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 7128.0, 'mean_loss': 2.531, 'mean_rank': 13.13, 'mrr': 0.5582, 'train_accuracy': 0.4631}
+[ time:2490.0s total_exs:194816 epochs:1.95 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 760, 'gnorm': 4035.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 6914.0, 'mean_loss': 2.455, 'mean_rank': 11.87, 'mrr': 0.5672, 'train_accuracy': 0.4659}
+[ time:2512.0s total_exs:197888 epochs:1.98 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 772, 'gnorm': 4082.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 7765.0, 'mean_loss': 2.528, 'mean_rank': 13.56, 'mrr': 0.5567, 'train_accuracy': 0.4561}
+[ running eval: valid ]
+[ eval completed in 348.80s ]
+valid:{'exs': 5000, 'accuracy': 0.5318, 'f1': 0.5511, 'hits@1': 0.532, 'hits@5': 0.759, 'hits@10': 0.846, 'hits@50': 0.98, 'hits@100': 1.0, 'bleu-4': 0.4756, 'lr': 5e-05, 'total_train_updates': 782, 'gpu_mem_percent': 0.755, 'examples': 5000, 'loss': 9923.0, 'mean_loss': 1.985, 'mean_rank': 6.209, 'mrr': 0.6364}
+[ saving model checkpoint: ./model/poly_dstc7_model.checkpoint ]
+[ new best accuracy: 0.5318 (previous best was 0.5128) ]
+[ saving best valid model: ./model/poly_dstc7_model ]
+[ saving best valid metric: ./model/poly_dstc7_model.best_valid ]
+[ time:2893.0s total_exs:200960 epochs:2.01 ] {'exs': 2720, 'lr': 5e-05, 'total_train_updates': 783, 'gnorm': 3932.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 256, 'loss': 561.2, 'mean_loss': 2.192, 'mean_rank': 8.082, 'mrr': 0.6095, 'train_accuracy': 0.5078}
+[ time:2914.0s total_exs:203776 epochs:2.04 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 794, 'gnorm': 4054.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 6363.0, 'mean_loss': 2.259, 'mean_rank': 10.33, 'mrr': 0.5989, 'train_accuracy': 0.4957}
+[ time:2934.0s total_exs:206592 epochs:2.07 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 805, 'gnorm': 4159.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 6212.0, 'mean_loss': 2.206, 'mean_rank': 10.06, 'mrr': 0.6076, 'train_accuracy': 0.5067}
+[ time:2954.0s total_exs:209408 epochs:2.09 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 816, 'gnorm': 3940.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 6306.0, 'mean_loss': 2.239, 'mean_rank': 10.03, 'mrr': 0.6005, 'train_accuracy': 0.5028}
+[ time:2975.0s total_exs:212224 epochs:2.12 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 827, 'gnorm': 4154.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 6483.0, 'mean_loss': 2.302, 'mean_rank': 10.48, 'mrr': 0.589, 'train_accuracy': 0.4886}
+[ time:2996.0s total_exs:215296 epochs:2.15 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 839, 'gnorm': 4013.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 6862.0, 'mean_loss': 2.234, 'mean_rank': 10.19, 'mrr': 0.6006, 'train_accuracy': 0.499}
+[ time:3018.0s total_exs:218368 epochs:2.18 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 851, 'gnorm': 4279.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 6950.0, 'mean_loss': 2.263, 'mean_rank': 10.21, 'mrr': 0.6021, 'train_accuracy': 0.5}
+[ time:3038.0s total_exs:221184 epochs:2.21 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 862, 'gnorm': 4535.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 6328.0, 'mean_loss': 2.247, 'mean_rank': 10.14, 'mrr': 0.597, 'train_accuracy': 0.4911}
+[ time:3058.0s total_exs:224000 epochs:2.24 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 873, 'gnorm': 4228.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 6343.0, 'mean_loss': 2.253, 'mean_rank': 10.47, 'mrr': 0.6027, 'train_accuracy': 0.5046}
+[ time:3079.0s total_exs:227072 epochs:2.27 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 885, 'gnorm': 4591.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 7111.0, 'mean_loss': 2.315, 'mean_rank': 10.57, 'mrr': 0.5874, 'train_accuracy': 0.4867}
+[ time:3101.0s total_exs:230144 epochs:2.3 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 897, 'gnorm': 4199.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 6813.0, 'mean_loss': 2.218, 'mean_rank': 10.02, 'mrr': 0.6075, 'train_accuracy': 0.5094}
+[ time:3122.0s total_exs:233216 epochs:2.33 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 909, 'gnorm': 4180.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 6940.0, 'mean_loss': 2.259, 'mean_rank': 10.05, 'mrr': 0.5971, 'train_accuracy': 0.4961}
+[ time:3142.0s total_exs:236032 epochs:2.36 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 920, 'gnorm': 4135.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 6452.0, 'mean_loss': 2.291, 'mean_rank': 10.48, 'mrr': 0.5916, 'train_accuracy': 0.4918}
+[ time:3165.0s total_exs:239104 epochs:2.39 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 932, 'gnorm': 4048.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 7275.0, 'mean_loss': 2.368, 'mean_rank': 11.05, 'mrr': 0.5773, 'train_accuracy': 0.4769}
+[ time:3186.0s total_exs:242176 epochs:2.42 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 944, 'gnorm': 4073.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 7001.0, 'mean_loss': 2.279, 'mean_rank': 10.45, 'mrr': 0.5962, 'train_accuracy': 0.4961}
+[ time:3207.0s total_exs:245248 epochs:2.45 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 956, 'gnorm': 4365.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 6832.0, 'mean_loss': 2.224, 'mean_rank': 9.985, 'mrr': 0.6046, 'train_accuracy': 0.501}
+[ time:3228.0s total_exs:248064 epochs:2.48 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 967, 'gnorm': 6205.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 6519.0, 'mean_loss': 2.315, 'mean_rank': 10.57, 'mrr': 0.5885, 'train_accuracy': 0.4876}
+[ time:3248.0s total_exs:250880 epochs:2.51 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 978, 'gnorm': 4890.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 6470.0, 'mean_loss': 2.298, 'mean_rank': 10.54, 'mrr': 0.5921, 'train_accuracy': 0.4904}
+[ running eval: valid ]
+[ eval completed in 348.37s ]
+valid:{'exs': 5000, 'accuracy': 0.5398, 'f1': 0.5581, 'hits@1': 0.54, 'hits@5': 0.761, 'hits@10': 0.85, 'hits@50': 0.982, 'hits@100': 1.0, 'bleu-4': 0.4752, 'lr': 5e-05, 'total_train_updates': 978, 'gpu_mem_percent': 0.755, 'examples': 5000, 'loss': 9804.0, 'mean_loss': 1.961, 'mean_rank': 6.074, 'mrr': 0.642}
+[ saving model checkpoint: ./model/poly_dstc7_model.checkpoint ]
+[ new best accuracy: 0.5398 (previous best was 0.5318) ]
+[ saving best valid model: ./model/poly_dstc7_model ]
+[ saving best valid metric: ./model/poly_dstc7_model.best_valid ]
+[ time:3609.0s total_exs:251136 epochs:2.51 ] {'exs': 256, 'lr': 5e-05, 'total_train_updates': 979, 'gnorm': 4221.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 256, 'loss': 578.6, 'mean_loss': 2.26, 'mean_rank': 9.531, 'mrr': 0.5984, 'train_accuracy': 0.5}
+[ time:3631.0s total_exs:254208 epochs:2.54 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 991, 'gnorm': 4132.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 6855.0, 'mean_loss': 2.231, 'mean_rank': 9.929, 'mrr': 0.6018, 'train_accuracy': 0.5013}
+[ time:3652.0s total_exs:257280 epochs:2.57 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 1003, 'gnorm': 4083.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 6983.0, 'mean_loss': 2.273, 'mean_rank': 10.94, 'mrr': 0.5945, 'train_accuracy': 0.4948}
+[ time:3674.0s total_exs:260352 epochs:2.6 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 1015, 'gnorm': 4508.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 6730.0, 'mean_loss': 2.191, 'mean_rank': 9.438, 'mrr': 0.6094, 'train_accuracy': 0.5088}
+[ time:3694.0s total_exs:263168 epochs:2.63 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 1026, 'gnorm': 4418.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 6315.0, 'mean_loss': 2.242, 'mean_rank': 9.657, 'mrr': 0.5923, 'train_accuracy': 0.4897}
+[ time:3714.0s total_exs:265984 epochs:2.66 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 1037, 'gnorm': 4125.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 6359.0, 'mean_loss': 2.258, 'mean_rank': 10.51, 'mrr': 0.6008, 'train_accuracy': 0.4993}
+[ time:3734.0s total_exs:268800 epochs:2.69 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 1048, 'gnorm': 4382.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 6320.0, 'mean_loss': 2.244, 'mean_rank': 10.02, 'mrr': 0.5969, 'train_accuracy': 0.4961}
+[ time:3756.0s total_exs:271872 epochs:2.72 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 1060, 'gnorm': 4329.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 6983.0, 'mean_loss': 2.273, 'mean_rank': 11.12, 'mrr': 0.601, 'train_accuracy': 0.5023}
+[ time:3778.0s total_exs:274944 epochs:2.75 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 1072, 'gnorm': 8040.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 6838.0, 'mean_loss': 2.226, 'mean_rank': 9.68, 'mrr': 0.6056, 'train_accuracy': 0.5023}
+[ time:3798.0s total_exs:277760 epochs:2.78 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 1083, 'gnorm': 4307.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 6049.0, 'mean_loss': 2.148, 'mean_rank': 9.423, 'mrr': 0.6166, 'train_accuracy': 0.5167}
+[ time:3819.0s total_exs:280832 epochs:2.81 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 1095, 'gnorm': 4875.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 7031.0, 'mean_loss': 2.289, 'mean_rank': 10.2, 'mrr': 0.5922, 'train_accuracy': 0.4919}
+[ time:3839.0s total_exs:283648 epochs:2.84 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 1106, 'gnorm': 4367.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 6229.0, 'mean_loss': 2.212, 'mean_rank': 10.18, 'mrr': 0.605, 'train_accuracy': 0.5071}
+[ time:3860.0s total_exs:286464 epochs:2.86 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 1117, 'gnorm': 4589.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 6226.0, 'mean_loss': 2.211, 'mean_rank': 9.518, 'mrr': 0.6028, 'train_accuracy': 0.5028}
+[ time:3881.0s total_exs:289280 epochs:2.89 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 1128, 'gnorm': 4203.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 6371.0, 'mean_loss': 2.262, 'mean_rank': 10.52, 'mrr': 0.5971, 'train_accuracy': 0.4922}
+[ time:3901.0s total_exs:292096 epochs:2.92 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 1139, 'gnorm': 4448.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 6293.0, 'mean_loss': 2.235, 'mean_rank': 10.27, 'mrr': 0.6003, 'train_accuracy': 0.5018}
+[ time:3921.0s total_exs:294912 epochs:2.95 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 1150, 'gnorm': 4342.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 6369.0, 'mean_loss': 2.262, 'mean_rank': 10.46, 'mrr': 0.5997, 'train_accuracy': 0.5018}
+[ time:3941.0s total_exs:297728 epochs:2.98 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 1161, 'gnorm': 4195.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 6445.0, 'mean_loss': 2.289, 'mean_rank': 10.79, 'mrr': 0.5989, 'train_accuracy': 0.5004}
+[ time:3962.0s total_exs:300800 epochs:3.01 ] {'exs': 2976, 'lr': 5e-05, 'total_train_updates': 1173, 'gnorm': 4023.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2976, 'loss': 6577.0, 'mean_loss': 2.21, 'mean_rank': 9.483, 'mrr': 0.608, 'train_accuracy': 0.5101}
+[ running eval: valid ]
+[ eval completed in 349.54s ]
+valid:{'exs': 5000, 'accuracy': 0.545, 'f1': 0.5633, 'hits@1': 0.545, 'hits@5': 0.775, 'hits@10': 0.851, 'hits@50': 0.982, 'hits@100': 1.0, 'bleu-4': 0.4874, 'lr': 5e-05, 'total_train_updates': 1173, 'gpu_mem_percent': 0.755, 'examples': 5000, 'loss': 9716.0, 'mean_loss': 1.943, 'mean_rank': 5.897, 'mrr': 0.6477}
+[ saving model checkpoint: ./model/poly_dstc7_model.checkpoint ]
+[ new best accuracy: 0.545 (previous best was 0.5398) ]
+[ saving best valid model: ./model/poly_dstc7_model ]
+[ saving best valid metric: ./model/poly_dstc7_model.best_valid ]
+[ time:4328.0s total_exs:301312 epochs:3.01 ] {'exs': 256, 'lr': 5e-05, 'total_train_updates': 1174, 'gnorm': 3844.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 256, 'loss': 515.2, 'mean_loss': 2.013, 'mean_rank': 8.387, 'mrr': 0.6669, 'train_accuracy': 0.5781}
+[ time:4350.0s total_exs:304128 epochs:3.04 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 1185, 'gnorm': 4299.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 5573.0, 'mean_loss': 1.979, 'mean_rank': 7.608, 'mrr': 0.6432, 'train_accuracy': 0.5458}
+[ time:4371.0s total_exs:307200 epochs:3.07 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 1197, 'gnorm': 4038.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 6117.0, 'mean_loss': 1.991, 'mean_rank': 7.981, 'mrr': 0.6423, 'train_accuracy': 0.5426}
+[ time:4392.0s total_exs:310016 epochs:3.1 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 1208, 'gnorm': 4445.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 5674.0, 'mean_loss': 2.015, 'mean_rank': 7.928, 'mrr': 0.6305, 'train_accuracy': 0.5227}
+[ time:4413.0s total_exs:313088 epochs:3.13 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 1220, 'gnorm': 4050.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 6084.0, 'mean_loss': 1.98, 'mean_rank': 8.178, 'mrr': 0.6457, 'train_accuracy': 0.5462}
+[ time:4434.0s total_exs:316160 epochs:3.16 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 1232, 'gnorm': 4052.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5830.0, 'mean_loss': 1.898, 'mean_rank': 7.783, 'mrr': 0.6627, 'train_accuracy': 0.5687}
+[ time:4456.0s total_exs:319232 epochs:3.19 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 1244, 'gnorm': 4284.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5747.0, 'mean_loss': 1.871, 'mean_rank': 6.923, 'mrr': 0.6604, 'train_accuracy': 0.5589}
+[ time:4476.0s total_exs:322048 epochs:3.22 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 1255, 'gnorm': 4138.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 5522.0, 'mean_loss': 1.961, 'mean_rank': 7.777, 'mrr': 0.6468, 'train_accuracy': 0.5469}
+[ time:4496.0s total_exs:324864 epochs:3.25 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 1266, 'gnorm': 4531.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 5290.0, 'mean_loss': 1.879, 'mean_rank': 7.11, 'mrr': 0.6595, 'train_accuracy': 0.5625}
+[ time:4518.0s total_exs:327936 epochs:3.28 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 1278, 'gnorm': 4205.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 6095.0, 'mean_loss': 1.984, 'mean_rank': 7.695, 'mrr': 0.6433, 'train_accuracy': 0.5439}
+[ time:4538.0s total_exs:330752 epochs:3.31 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 1289, 'gnorm': 3991.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 5509.0, 'mean_loss': 1.956, 'mean_rank': 8.103, 'mrr': 0.6451, 'train_accuracy': 0.5479}
+[ time:4559.0s total_exs:333568 epochs:3.34 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 1300, 'gnorm': 4239.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 5659.0, 'mean_loss': 2.01, 'mean_rank': 8.284, 'mrr': 0.6397, 'train_accuracy': 0.5401}
+[ time:4579.0s total_exs:336384 epochs:3.36 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 1311, 'gnorm': 4246.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 5538.0, 'mean_loss': 1.967, 'mean_rank': 7.628, 'mrr': 0.6465, 'train_accuracy': 0.5465}
+[ time:4600.0s total_exs:339456 epochs:3.39 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 1323, 'gnorm': 4303.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 6127.0, 'mean_loss': 1.994, 'mean_rank': 8.057, 'mrr': 0.6421, 'train_accuracy': 0.542}
+[ time:4622.0s total_exs:342528 epochs:3.43 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 1335, 'gnorm': 4143.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 6167.0, 'mean_loss': 2.007, 'mean_rank': 8.098, 'mrr': 0.6423, 'train_accuracy': 0.5449}
+[ time:4644.0s total_exs:345600 epochs:3.46 ] {'exs': 3072, 'lr': 5e-05, 'total_train_updates': 1347, 'gnorm': 4325.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 6040.0, 'mean_loss': 1.966, 'mean_rank': 7.455, 'mrr': 0.6447, 'train_accuracy': 0.5417}
+[ time:4665.0s total_exs:348416 epochs:3.48 ] {'exs': 2816, 'lr': 5e-05, 'total_train_updates': 1358, 'gnorm': 4162.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 5509.0, 'mean_loss': 1.956, 'mean_rank': 7.698, 'mrr': 0.651, 'train_accuracy': 0.5515}
+[ running eval: valid ]
+[ eval completed in 348.28s ]
+valid:{'exs': 5000, 'accuracy': 0.5494, 'f1': 0.5682, 'hits@1': 0.549, 'hits@5': 0.779, 'hits@10': 0.859, 'hits@50': 0.983, 'hits@100': 1.0, 'bleu-4': 0.4834, 'lr': 5e-05, 'total_train_updates': 1369, 'gpu_mem_percent': 0.755, 'examples': 5000, 'loss': 9723.0, 'mean_loss': 1.945, 'mean_rank': 5.729, 'mrr': 0.6516}
+[ saving model checkpoint: ./model/poly_dstc7_model.checkpoint ]
+Epoch     6: reducing learning rate of group 0 to 2.0000e-05.
+[ new best accuracy: 0.5494 (previous best was 0.545) ]
+[ saving best valid model: ./model/poly_dstc7_model ]
+[ saving best valid metric: ./model/poly_dstc7_model.best_valid ]
+[ time:5045.0s total_exs:351488 epochs:3.51 ] {'exs': 3072, 'lr': 2e-05, 'total_train_updates': 1370, 'gnorm': 4016.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 256, 'loss': 498.4, 'mean_loss': 1.947, 'mean_rank': 7.324, 'mrr': 0.6544, 'train_accuracy': 0.5586}
+[ time:5067.0s total_exs:354560 epochs:3.55 ] {'exs': 3072, 'lr': 2e-05, 'total_train_updates': 1382, 'gnorm': 4173.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 6060.0, 'mean_loss': 1.973, 'mean_rank': 7.603, 'mrr': 0.6467, 'train_accuracy': 0.5465}
+[ time:5088.0s total_exs:357632 epochs:3.58 ] {'exs': 3072, 'lr': 2e-05, 'total_train_updates': 1394, 'gnorm': 3846.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5895.0, 'mean_loss': 1.919, 'mean_rank': 7.392, 'mrr': 0.6536, 'train_accuracy': 0.5537}
+[ time:5111.0s total_exs:360704 epochs:3.61 ] {'exs': 3072, 'lr': 2e-05, 'total_train_updates': 1406, 'gnorm': 4024.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5842.0, 'mean_loss': 1.902, 'mean_rank': 7.405, 'mrr': 0.6578, 'train_accuracy': 0.5583}
+[ time:5133.0s total_exs:363776 epochs:3.64 ] {'exs': 3072, 'lr': 2e-05, 'total_train_updates': 1418, 'gnorm': 3892.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5712.0, 'mean_loss': 1.859, 'mean_rank': 7.305, 'mrr': 0.6696, 'train_accuracy': 0.5742}
+[ time:5153.0s total_exs:366592 epochs:3.67 ] {'exs': 2816, 'lr': 2e-05, 'total_train_updates': 1429, 'gnorm': 3931.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 5326.0, 'mean_loss': 1.891, 'mean_rank': 7.106, 'mrr': 0.6627, 'train_accuracy': 0.5646}
+[ time:5174.0s total_exs:369664 epochs:3.7 ] {'exs': 3072, 'lr': 2e-05, 'total_train_updates': 1441, 'gnorm': 4071.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5866.0, 'mean_loss': 1.909, 'mean_rank': 7.281, 'mrr': 0.6562, 'train_accuracy': 0.557}
+[ time:5195.0s total_exs:372736 epochs:3.73 ] {'exs': 3072, 'lr': 2e-05, 'total_train_updates': 1453, 'gnorm': 3928.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5864.0, 'mean_loss': 1.909, 'mean_rank': 7.749, 'mrr': 0.6575, 'train_accuracy': 0.5632}
+[ time:5217.0s total_exs:375808 epochs:3.76 ] {'exs': 3072, 'lr': 2e-05, 'total_train_updates': 1465, 'gnorm': 4033.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 6031.0, 'mean_loss': 1.963, 'mean_rank': 7.647, 'mrr': 0.6449, 'train_accuracy': 0.5446}
+[ time:5237.0s total_exs:378624 epochs:3.79 ] {'exs': 2816, 'lr': 2e-05, 'total_train_updates': 1476, 'gnorm': 3903.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 5515.0, 'mean_loss': 1.959, 'mean_rank': 7.762, 'mrr': 0.6455, 'train_accuracy': 0.5405}
+[ time:5257.0s total_exs:381440 epochs:3.81 ] {'exs': 2816, 'lr': 2e-05, 'total_train_updates': 1487, 'gnorm': 3890.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 5400.0, 'mean_loss': 1.917, 'mean_rank': 7.629, 'mrr': 0.6558, 'train_accuracy': 0.5604}
+[ time:5277.0s total_exs:384256 epochs:3.84 ] {'exs': 2816, 'lr': 2e-05, 'total_train_updates': 1498, 'gnorm': 3927.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 5292.0, 'mean_loss': 1.879, 'mean_rank': 7.114, 'mrr': 0.66, 'train_accuracy': 0.5579}
+[ time:5299.0s total_exs:387328 epochs:3.87 ] {'exs': 3072, 'lr': 2e-05, 'total_train_updates': 1510, 'gnorm': 3970.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5903.0, 'mean_loss': 1.921, 'mean_rank': 7.777, 'mrr': 0.6628, 'train_accuracy': 0.568}
+[ time:5320.0s total_exs:390144 epochs:3.9 ] {'exs': 2816, 'lr': 2e-05, 'total_train_updates': 1521, 'gnorm': 3974.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 5327.0, 'mean_loss': 1.892, 'mean_rank': 7.379, 'mrr': 0.6608, 'train_accuracy': 0.56}
+[ time:5341.0s total_exs:393216 epochs:3.93 ] {'exs': 3072, 'lr': 2e-05, 'total_train_updates': 1533, 'gnorm': 3900.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5718.0, 'mean_loss': 1.861, 'mean_rank': 7.189, 'mrr': 0.6584, 'train_accuracy': 0.5615}
+[ time:5361.0s total_exs:396032 epochs:3.96 ] {'exs': 2816, 'lr': 2e-05, 'total_train_updates': 1544, 'gnorm': 3948.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 5519.0, 'mean_loss': 1.96, 'mean_rank': 7.6, 'mrr': 0.6458, 'train_accuracy': 0.5487}
+[ time:5383.0s total_exs:399104 epochs:3.99 ] {'exs': 3072, 'lr': 2e-05, 'total_train_updates': 1556, 'gnorm': 4011.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5981.0, 'mean_loss': 1.947, 'mean_rank': 7.61, 'mrr': 0.648, 'train_accuracy': 0.5505}
+[ running eval: valid ]
+[ eval completed in 348.98s ]
+valid:{'exs': 5000, 'accuracy': 0.5586, 'f1': 0.5757, 'hits@1': 0.559, 'hits@5': 0.788, 'hits@10': 0.863, 'hits@50': 0.983, 'hits@100': 1.0, 'bleu-4': 0.4914, 'lr': 2e-05, 'total_train_updates': 1564, 'gpu_mem_percent': 0.755, 'examples': 5000, 'loss': 9490.0, 'mean_loss': 1.898, 'mean_rank': 5.532, 'mrr': 0.6612}
+[ saving model checkpoint: ./model/poly_dstc7_model.checkpoint ]
+[ new best accuracy: 0.5586 (previous best was 0.5494) ]
+[ saving best valid model: ./model/poly_dstc7_model ]
+[ saving best valid metric: ./model/poly_dstc7_model.best_valid ]
+[ time:5760.0s total_exs:401664 epochs:4.02 ] {'exs': 2208, 'lr': 2e-05, 'total_train_updates': 1565, 'gnorm': 3530.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 256, 'loss': 418.9, 'mean_loss': 1.636, 'mean_rank': 5.309, 'mrr': 0.6944, 'train_accuracy': 0.6094}
+[ time:5781.0s total_exs:404480 epochs:4.04 ] {'exs': 2816, 'lr': 2e-05, 'total_train_updates': 1576, 'gnorm': 4260.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4893.0, 'mean_loss': 1.738, 'mean_rank': 6.014, 'mrr': 0.6815, 'train_accuracy': 0.5835}
+[ time:5801.0s total_exs:407296 epochs:4.07 ] {'exs': 2816, 'lr': 2e-05, 'total_train_updates': 1587, 'gnorm': 3916.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4714.0, 'mean_loss': 1.674, 'mean_rank': 6.016, 'mrr': 0.7026, 'train_accuracy': 0.6104}
+[ time:5821.0s total_exs:410112 epochs:4.1 ] {'exs': 2816, 'lr': 2e-05, 'total_train_updates': 1598, 'gnorm': 3876.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4734.0, 'mean_loss': 1.681, 'mean_rank': 6.072, 'mrr': 0.6975, 'train_accuracy': 0.6026}
+[ time:5842.0s total_exs:413184 epochs:4.13 ] {'exs': 3072, 'lr': 2e-05, 'total_train_updates': 1610, 'gnorm': 3995.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5094.0, 'mean_loss': 1.658, 'mean_rank': 5.674, 'mrr': 0.7004, 'train_accuracy': 0.6025}
+[ time:5865.0s total_exs:416256 epochs:4.16 ] {'exs': 3072, 'lr': 2e-05, 'total_train_updates': 1622, 'gnorm': 4003.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4905.0, 'mean_loss': 1.597, 'mean_rank': 5.195, 'mrr': 0.7056, 'train_accuracy': 0.6081}
+[ time:5886.0s total_exs:419328 epochs:4.19 ] {'exs': 3072, 'lr': 2e-05, 'total_train_updates': 1634, 'gnorm': 3964.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5366.0, 'mean_loss': 1.747, 'mean_rank': 5.945, 'mrr': 0.6826, 'train_accuracy': 0.5817}
+[ time:5908.0s total_exs:422400 epochs:4.22 ] {'exs': 3072, 'lr': 2e-05, 'total_train_updates': 1646, 'gnorm': 4041.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5150.0, 'mean_loss': 1.676, 'mean_rank': 5.845, 'mrr': 0.6973, 'train_accuracy': 0.6042}
+[ time:5928.0s total_exs:425216 epochs:4.25 ] {'exs': 2816, 'lr': 2e-05, 'total_train_updates': 1657, 'gnorm': 4174.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 5008.0, 'mean_loss': 1.779, 'mean_rank': 6.558, 'mrr': 0.685, 'train_accuracy': 0.5909}
+[ time:5949.0s total_exs:428288 epochs:4.28 ] {'exs': 3072, 'lr': 2e-05, 'total_train_updates': 1669, 'gnorm': 3919.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5169.0, 'mean_loss': 1.683, 'mean_rank': 6.071, 'mrr': 0.6945, 'train_accuracy': 0.598}
+[ time:5972.0s total_exs:431360 epochs:4.31 ] {'exs': 3072, 'lr': 2e-05, 'total_train_updates': 1681, 'gnorm': 4029.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5255.0, 'mean_loss': 1.711, 'mean_rank': 6.024, 'mrr': 0.6878, 'train_accuracy': 0.5898}
+[ time:5992.0s total_exs:434176 epochs:4.34 ] {'exs': 2816, 'lr': 2e-05, 'total_train_updates': 1692, 'gnorm': 4217.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4580.0, 'mean_loss': 1.626, 'mean_rank': 5.37, 'mrr': 0.7054, 'train_accuracy': 0.6112}
+[ time:6013.0s total_exs:437248 epochs:4.37 ] {'exs': 3072, 'lr': 2e-05, 'total_train_updates': 1704, 'gnorm': 4146.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5370.0, 'mean_loss': 1.748, 'mean_rank': 6.15, 'mrr': 0.6845, 'train_accuracy': 0.5918}
+[ time:6033.0s total_exs:440064 epochs:4.4 ] {'exs': 2816, 'lr': 2e-05, 'total_train_updates': 1715, 'gnorm': 4054.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4968.0, 'mean_loss': 1.764, 'mean_rank': 6.391, 'mrr': 0.6743, 'train_accuracy': 0.5781}
+[ time:6055.0s total_exs:443136 epochs:4.43 ] {'exs': 3072, 'lr': 2e-05, 'total_train_updates': 1727, 'gnorm': 4031.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5198.0, 'mean_loss': 1.692, 'mean_rank': 5.442, 'mrr': 0.6887, 'train_accuracy': 0.5882}
+[ time:6076.0s total_exs:446208 epochs:4.46 ] {'exs': 3072, 'lr': 2e-05, 'total_train_updates': 1739, 'gnorm': 4272.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5205.0, 'mean_loss': 1.694, 'mean_rank': 5.582, 'mrr': 0.6876, 'train_accuracy': 0.5827}
+[ time:6097.0s total_exs:449024 epochs:4.49 ] {'exs': 2816, 'lr': 2e-05, 'total_train_updates': 1750, 'gnorm': 4045.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4809.0, 'mean_loss': 1.708, 'mean_rank': 6.234, 'mrr': 0.6921, 'train_accuracy': 0.5955}
+[ running eval: valid ]
+[ eval completed in 344.28s ]
+valid:{'exs': 5000, 'accuracy': 0.561, 'f1': 0.5778, 'hits@1': 0.561, 'hits@5': 0.785, 'hits@10': 0.862, 'hits@50': 0.984, 'hits@100': 1.0, 'bleu-4': 0.494, 'lr': 2e-05, 'total_train_updates': 1760, 'gpu_mem_percent': 0.755, 'examples': 5000, 'loss': 9553.0, 'mean_loss': 1.911, 'mean_rank': 5.554, 'mrr': 0.6612}
+[ saving model checkpoint: ./model/poly_dstc7_model.checkpoint ]
+Epoch     8: reducing learning rate of group 0 to 8.0000e-06.
+[ new best accuracy: 0.561 (previous best was 0.5586) ]
+[ saving best valid model: ./model/poly_dstc7_model ]
+[ saving best valid metric: ./model/poly_dstc7_model.best_valid ]
+[ time:6473.0s total_exs:451840 epochs:4.52 ] {'exs': 2816, 'lr': 8e-06, 'total_train_updates': 1761, 'gnorm': 3794.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 256, 'loss': 403.4, 'mean_loss': 1.576, 'mean_rank': 5.195, 'mrr': 0.709, 'train_accuracy': 0.6133}
+[ time:6494.0s total_exs:454656 epochs:4.55 ] {'exs': 2816, 'lr': 8e-06, 'total_train_updates': 1772, 'gnorm': 3953.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4687.0, 'mean_loss': 1.664, 'mean_rank': 5.859, 'mrr': 0.6957, 'train_accuracy': 0.5987}
+[ time:6515.0s total_exs:457728 epochs:4.58 ] {'exs': 3072, 'lr': 8e-06, 'total_train_updates': 1784, 'gnorm': 4104.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5250.0, 'mean_loss': 1.709, 'mean_rank': 6.374, 'mrr': 0.6916, 'train_accuracy': 0.5954}
+[ time:6536.0s total_exs:460800 epochs:4.61 ] {'exs': 3072, 'lr': 8e-06, 'total_train_updates': 1796, 'gnorm': 3919.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5150.0, 'mean_loss': 1.677, 'mean_rank': 6.04, 'mrr': 0.697, 'train_accuracy': 0.6032}
+[ time:6557.0s total_exs:463616 epochs:4.64 ] {'exs': 2816, 'lr': 8e-06, 'total_train_updates': 1807, 'gnorm': 4010.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4593.0, 'mean_loss': 1.631, 'mean_rank': 5.349, 'mrr': 0.7042, 'train_accuracy': 0.609}
+[ time:6577.0s total_exs:466432 epochs:4.66 ] {'exs': 2816, 'lr': 8e-06, 'total_train_updates': 1818, 'gnorm': 4037.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4856.0, 'mean_loss': 1.724, 'mean_rank': 5.847, 'mrr': 0.6885, 'train_accuracy': 0.592}
+[ time:6598.0s total_exs:469504 epochs:4.7 ] {'exs': 3072, 'lr': 8e-06, 'total_train_updates': 1830, 'gnorm': 4009.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5155.0, 'mean_loss': 1.678, 'mean_rank': 5.744, 'mrr': 0.6955, 'train_accuracy': 0.5993}
+[ time:6619.0s total_exs:472576 epochs:4.73 ] {'exs': 3072, 'lr': 8e-06, 'total_train_updates': 1842, 'gnorm': 4051.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5134.0, 'mean_loss': 1.671, 'mean_rank': 5.937, 'mrr': 0.6956, 'train_accuracy': 0.5941}
+[ time:6641.0s total_exs:475648 epochs:4.76 ] {'exs': 3072, 'lr': 8e-06, 'total_train_updates': 1854, 'gnorm': 4084.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5244.0, 'mean_loss': 1.707, 'mean_rank': 5.73, 'mrr': 0.6913, 'train_accuracy': 0.5951}
+[ time:6661.0s total_exs:478464 epochs:4.78 ] {'exs': 2816, 'lr': 8e-06, 'total_train_updates': 1865, 'gnorm': 4113.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4665.0, 'mean_loss': 1.657, 'mean_rank': 5.979, 'mrr': 0.7028, 'train_accuracy': 0.6097}
+[ time:6683.0s total_exs:481536 epochs:4.82 ] {'exs': 3072, 'lr': 8e-06, 'total_train_updates': 1877, 'gnorm': 3971.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5292.0, 'mean_loss': 1.723, 'mean_rank': 6.451, 'mrr': 0.6931, 'train_accuracy': 0.6022}
+[ time:6704.0s total_exs:484608 epochs:4.85 ] {'exs': 3072, 'lr': 8e-06, 'total_train_updates': 1889, 'gnorm': 4042.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5167.0, 'mean_loss': 1.682, 'mean_rank': 5.895, 'mrr': 0.696, 'train_accuracy': 0.5986}
+[ time:6726.0s total_exs:487680 epochs:4.88 ] {'exs': 3072, 'lr': 8e-06, 'total_train_updates': 1901, 'gnorm': 4008.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5519.0, 'mean_loss': 1.797, 'mean_rank': 6.571, 'mrr': 0.6778, 'train_accuracy': 0.5824}
+[ time:6748.0s total_exs:490752 epochs:4.91 ] {'exs': 3072, 'lr': 8e-06, 'total_train_updates': 1913, 'gnorm': 3974.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5246.0, 'mean_loss': 1.708, 'mean_rank': 5.908, 'mrr': 0.6934, 'train_accuracy': 0.5996}
+[ time:6770.0s total_exs:493824 epochs:4.94 ] {'exs': 3072, 'lr': 8e-06, 'total_train_updates': 1925, 'gnorm': 4140.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5075.0, 'mean_loss': 1.652, 'mean_rank': 5.489, 'mrr': 0.6986, 'train_accuracy': 0.5999}
+[ time:6791.0s total_exs:496896 epochs:4.97 ] {'exs': 3072, 'lr': 8e-06, 'total_train_updates': 1937, 'gnorm': 3945.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5076.0, 'mean_loss': 1.652, 'mean_rank': 5.352, 'mrr': 0.6934, 'train_accuracy': 0.5915}
+[ time:6813.0s total_exs:499968 epochs:5.0 ] {'exs': 3072, 'lr': 8e-06, 'total_train_updates': 1949, 'gnorm': 4481.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 5367.0, 'mean_loss': 1.747, 'mean_rank': 6.467, 'mrr': 0.6854, 'train_accuracy': 0.5941}
+[ running eval: valid ]
+[ eval completed in 348.82s ]
+valid:{'exs': 5000, 'accuracy': 0.5614, 'f1': 0.5782, 'hits@1': 0.561, 'hits@5': 0.789, 'hits@10': 0.866, 'hits@50': 0.984, 'hits@100': 1.0, 'bleu-4': 0.493, 'lr': 8e-06, 'total_train_updates': 1955, 'gpu_mem_percent': 0.755, 'examples': 5000, 'loss': 9570.0, 'mean_loss': 1.914, 'mean_rank': 5.486, 'mrr': 0.663}
+[ saving model checkpoint: ./model/poly_dstc7_model.checkpoint ]
+Epoch     9: reducing learning rate of group 0 to 3.2000e-06.
+[ new best accuracy: 0.5614 (previous best was 0.561) ]
+[ saving best valid model: ./model/poly_dstc7_model ]
+[ saving best valid metric: ./model/poly_dstc7_model.best_valid ]
+[ time:7187.0s total_exs:502016 epochs:5.02 ] {'exs': 1696, 'lr': 3.2e-06, 'total_train_updates': 1956, 'gnorm': 4021.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 256, 'loss': 401.6, 'mean_loss': 1.569, 'mean_rank': 4.75, 'mrr': 0.7164, 'train_accuracy': 0.625}
+[ time:7208.0s total_exs:504832 epochs:5.05 ] {'exs': 2816, 'lr': 3.2e-06, 'total_train_updates': 1967, 'gnorm': 3899.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4450.0, 'mean_loss': 1.58, 'mean_rank': 5.138, 'mrr': 0.7125, 'train_accuracy': 0.6154}
+[ time:7228.0s total_exs:507648 epochs:5.08 ] {'exs': 2816, 'lr': 3.2e-06, 'total_train_updates': 1978, 'gnorm': 4384.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4328.0, 'mean_loss': 1.537, 'mean_rank': 5.245, 'mrr': 0.7172, 'train_accuracy': 0.6211}
+[ time:7249.0s total_exs:510720 epochs:5.11 ] {'exs': 3072, 'lr': 3.2e-06, 'total_train_updates': 1990, 'gnorm': 4070.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4881.0, 'mean_loss': 1.589, 'mean_rank': 5.481, 'mrr': 0.7144, 'train_accuracy': 0.6224}
+[ time:7271.0s total_exs:513792 epochs:5.14 ] {'exs': 3072, 'lr': 3.2e-06, 'total_train_updates': 2002, 'gnorm': 3966.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4728.0, 'mean_loss': 1.539, 'mean_rank': 4.945, 'mrr': 0.7256, 'train_accuracy': 0.6351}
+[ time:7293.0s total_exs:516864 epochs:5.17 ] {'exs': 3072, 'lr': 3.2e-06, 'total_train_updates': 2014, 'gnorm': 4427.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4825.0, 'mean_loss': 1.571, 'mean_rank': 5.47, 'mrr': 0.7185, 'train_accuracy': 0.6286}
+[ time:7314.0s total_exs:519680 epochs:5.2 ] {'exs': 2816, 'lr': 3.2e-06, 'total_train_updates': 2025, 'gnorm': 3883.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4591.0, 'mean_loss': 1.63, 'mean_rank': 5.699, 'mrr': 0.7012, 'train_accuracy': 0.6058}
+[ time:7334.0s total_exs:522496 epochs:5.22 ] {'exs': 2816, 'lr': 3.2e-06, 'total_train_updates': 2036, 'gnorm': 3874.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4353.0, 'mean_loss': 1.546, 'mean_rank': 4.947, 'mrr': 0.7148, 'train_accuracy': 0.619}
+[ time:7355.0s total_exs:525568 epochs:5.26 ] {'exs': 3072, 'lr': 3.2e-06, 'total_train_updates': 2048, 'gnorm': 3873.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4675.0, 'mean_loss': 1.522, 'mean_rank': 4.98, 'mrr': 0.7236, 'train_accuracy': 0.6299}
+[ time:7375.0s total_exs:528384 epochs:5.28 ] {'exs': 2816, 'lr': 3.2e-06, 'total_train_updates': 2059, 'gnorm': 3924.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4362.0, 'mean_loss': 1.549, 'mean_rank': 5.091, 'mrr': 0.7177, 'train_accuracy': 0.6275}
+[ time:7395.0s total_exs:531200 epochs:5.31 ] {'exs': 2816, 'lr': 3.2e-06, 'total_train_updates': 2070, 'gnorm': 4034.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4507.0, 'mean_loss': 1.6, 'mean_rank': 5.423, 'mrr': 0.7131, 'train_accuracy': 0.6236}
+[ time:7416.0s total_exs:534016 epochs:5.34 ] {'exs': 2816, 'lr': 3.2e-06, 'total_train_updates': 2081, 'gnorm': 4037.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4592.0, 'mean_loss': 1.631, 'mean_rank': 5.371, 'mrr': 0.7021, 'train_accuracy': 0.6044}
+[ time:7437.0s total_exs:537088 epochs:5.37 ] {'exs': 3072, 'lr': 3.2e-06, 'total_train_updates': 2093, 'gnorm': 3924.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4753.0, 'mean_loss': 1.547, 'mean_rank': 5.037, 'mrr': 0.7236, 'train_accuracy': 0.6328}
+[ time:7459.0s total_exs:540160 epochs:5.4 ] {'exs': 3072, 'lr': 3.2e-06, 'total_train_updates': 2105, 'gnorm': 3980.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4792.0, 'mean_loss': 1.56, 'mean_rank': 5.244, 'mrr': 0.7205, 'train_accuracy': 0.6315}
+[ time:7479.0s total_exs:542976 epochs:5.43 ] {'exs': 2816, 'lr': 3.2e-06, 'total_train_updates': 2116, 'gnorm': 3904.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4458.0, 'mean_loss': 1.583, 'mean_rank': 5.337, 'mrr': 0.7127, 'train_accuracy': 0.6236}
+[ time:7501.0s total_exs:546048 epochs:5.46 ] {'exs': 3072, 'lr': 3.2e-06, 'total_train_updates': 2128, 'gnorm': 3880.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4703.0, 'mean_loss': 1.531, 'mean_rank': 4.952, 'mrr': 0.7187, 'train_accuracy': 0.626}
+[ time:7523.0s total_exs:549120 epochs:5.49 ] {'exs': 3072, 'lr': 3.2e-06, 'total_train_updates': 2140, 'gnorm': 3930.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4876.0, 'mean_loss': 1.587, 'mean_rank': 5.42, 'mrr': 0.7098, 'train_accuracy': 0.6162}
+[ running eval: valid ]
+[ eval completed in 350.35s ]
+valid:{'exs': 5000, 'accuracy': 0.5612, 'f1': 0.5781, 'hits@1': 0.561, 'hits@5': 0.79, 'hits@10': 0.866, 'hits@50': 0.984, 'hits@100': 1.0, 'bleu-4': 0.4918, 'lr': 3.2e-06, 'total_train_updates': 2151, 'gpu_mem_percent': 0.755, 'examples': 5000, 'loss': 9596.0, 'mean_loss': 1.919, 'mean_rank': 5.486, 'mrr': 0.6631}
+[ saving model checkpoint: ./model/poly_dstc7_model.checkpoint ]
+Epoch    10: reducing learning rate of group 0 to 1.2800e-06.
+[ did not beat best accuracy: 0.5614 impatience: 1 ]
+[ time:7900.0s total_exs:552192 epochs:5.52 ] {'exs': 3072, 'lr': 1.28e-06, 'total_train_updates': 2152, 'gnorm': 4317.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 256, 'loss': 443.4, 'mean_loss': 1.732, 'mean_rank': 6.406, 'mrr': 0.6784, 'train_accuracy': 0.5664}
+[ time:7922.0s total_exs:555264 epochs:5.55 ] {'exs': 3072, 'lr': 1.28e-06, 'total_train_updates': 2164, 'gnorm': 4593.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4980.0, 'mean_loss': 1.621, 'mean_rank': 5.192, 'mrr': 0.7025, 'train_accuracy': 0.6025}
+[ time:7943.0s total_exs:558336 epochs:5.58 ] {'exs': 3072, 'lr': 1.28e-06, 'total_train_updates': 2176, 'gnorm': 3962.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4814.0, 'mean_loss': 1.567, 'mean_rank': 5.405, 'mrr': 0.7186, 'train_accuracy': 0.6253}
+[ time:7964.0s total_exs:561152 epochs:5.61 ] {'exs': 2816, 'lr': 1.28e-06, 'total_train_updates': 2187, 'gnorm': 3993.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4454.0, 'mean_loss': 1.582, 'mean_rank': 5.369, 'mrr': 0.712, 'train_accuracy': 0.6222}
+[ time:7985.0s total_exs:564224 epochs:5.64 ] {'exs': 3072, 'lr': 1.28e-06, 'total_train_updates': 2199, 'gnorm': 4062.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4916.0, 'mean_loss': 1.6, 'mean_rank': 5.168, 'mrr': 0.7075, 'train_accuracy': 0.6107}
+[ time:8007.0s total_exs:567296 epochs:5.67 ] {'exs': 3072, 'lr': 1.28e-06, 'total_train_updates': 2211, 'gnorm': 3929.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4798.0, 'mean_loss': 1.562, 'mean_rank': 5.181, 'mrr': 0.7145, 'train_accuracy': 0.6159}
+[ time:8028.0s total_exs:570368 epochs:5.7 ] {'exs': 3072, 'lr': 1.28e-06, 'total_train_updates': 2223, 'gnorm': 4053.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4906.0, 'mean_loss': 1.597, 'mean_rank': 5.564, 'mrr': 0.7073, 'train_accuracy': 0.6084}
+[ time:8048.0s total_exs:573184 epochs:5.73 ] {'exs': 2816, 'lr': 1.28e-06, 'total_train_updates': 2234, 'gnorm': 4110.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4580.0, 'mean_loss': 1.626, 'mean_rank': 5.358, 'mrr': 0.704, 'train_accuracy': 0.6087}
+[ time:8068.0s total_exs:576000 epochs:5.76 ] {'exs': 2816, 'lr': 1.28e-06, 'total_train_updates': 2245, 'gnorm': 3977.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4510.0, 'mean_loss': 1.601, 'mean_rank': 5.407, 'mrr': 0.7085, 'train_accuracy': 0.6119}
+[ time:8088.0s total_exs:578816 epochs:5.79 ] {'exs': 2816, 'lr': 1.28e-06, 'total_train_updates': 2256, 'gnorm': 4135.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4551.0, 'mean_loss': 1.616, 'mean_rank': 5.498, 'mrr': 0.7073, 'train_accuracy': 0.6104}
+[ time:8110.0s total_exs:581888 epochs:5.82 ] {'exs': 3072, 'lr': 1.28e-06, 'total_train_updates': 2268, 'gnorm': 3950.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4780.0, 'mean_loss': 1.556, 'mean_rank': 5.219, 'mrr': 0.7186, 'train_accuracy': 0.624}
+[ time:8132.0s total_exs:584960 epochs:5.85 ] {'exs': 3072, 'lr': 1.28e-06, 'total_train_updates': 2280, 'gnorm': 3997.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4863.0, 'mean_loss': 1.583, 'mean_rank': 5.228, 'mrr': 0.7089, 'train_accuracy': 0.6113}
+[ time:8152.0s total_exs:587776 epochs:5.88 ] {'exs': 2816, 'lr': 1.28e-06, 'total_train_updates': 2291, 'gnorm': 3979.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4351.0, 'mean_loss': 1.545, 'mean_rank': 5.037, 'mrr': 0.7169, 'train_accuracy': 0.6197}
+[ time:8174.0s total_exs:590848 epochs:5.91 ] {'exs': 3072, 'lr': 1.28e-06, 'total_train_updates': 2303, 'gnorm': 3929.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4870.0, 'mean_loss': 1.585, 'mean_rank': 5.216, 'mrr': 0.7163, 'train_accuracy': 0.6214}
+[ time:8195.0s total_exs:593920 epochs:5.94 ] {'exs': 3072, 'lr': 1.28e-06, 'total_train_updates': 2315, 'gnorm': 4025.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4763.0, 'mean_loss': 1.55, 'mean_rank': 4.843, 'mrr': 0.716, 'train_accuracy': 0.6227}
+[ time:8217.0s total_exs:596992 epochs:5.97 ] {'exs': 3072, 'lr': 1.28e-06, 'total_train_updates': 2327, 'gnorm': 4061.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4865.0, 'mean_loss': 1.584, 'mean_rank': 4.91, 'mrr': 0.7127, 'train_accuracy': 0.6159}
+[ time:8239.0s total_exs:599552 epochs:6.0 ] {'exs': 2560, 'lr': 1.28e-06, 'total_train_updates': 2337, 'gnorm': 3882.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2560, 'loss': 3944.0, 'mean_loss': 1.541, 'mean_rank': 5.239, 'mrr': 0.7205, 'train_accuracy': 0.632}
+[ running eval: valid ]
+[ eval completed in 349.21s ]
+valid:{'exs': 5000, 'accuracy': 0.5634, 'f1': 0.5797, 'hits@1': 0.563, 'hits@5': 0.79, 'hits@10': 0.868, 'hits@50': 0.984, 'hits@100': 1.0, 'bleu-4': 0.4928, 'lr': 1.28e-06, 'total_train_updates': 2346, 'gpu_mem_percent': 0.755, 'examples': 5000, 'loss': 9635.0, 'mean_loss': 1.927, 'mean_rank': 5.493, 'mrr': 0.6639}
+[ saving model checkpoint: ./model/poly_dstc7_model.checkpoint ]
+Epoch    11: reducing learning rate of group 0 to 5.1200e-07.
+[ new best accuracy: 0.5634 (previous best was 0.5614) ]
+[ saving best valid model: ./model/poly_dstc7_model ]
+[ saving best valid metric: ./model/poly_dstc7_model.best_valid ]
+[ time:8619.0s total_exs:602368 epochs:6.02 ] {'exs': 2464, 'lr': 5.12e-07, 'total_train_updates': 2347, 'gnorm': 3914.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 256, 'loss': 407.3, 'mean_loss': 1.591, 'mean_rank': 5.078, 'mrr': 0.7069, 'train_accuracy': 0.6055}
+[ time:8640.0s total_exs:605184 epochs:6.05 ] {'exs': 2816, 'lr': 5.12e-07, 'total_train_updates': 2358, 'gnorm': 3845.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4068.0, 'mean_loss': 1.445, 'mean_rank': 4.515, 'mrr': 0.7352, 'train_accuracy': 0.6428}
+[ time:8660.0s total_exs:608000 epochs:6.08 ] {'exs': 2816, 'lr': 5.12e-07, 'total_train_updates': 2369, 'gnorm': 4367.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4575.0, 'mean_loss': 1.625, 'mean_rank': 5.423, 'mrr': 0.7052, 'train_accuracy': 0.6083}
+[ time:8682.0s total_exs:611072 epochs:6.11 ] {'exs': 3072, 'lr': 5.12e-07, 'total_train_updates': 2381, 'gnorm': 4091.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4746.0, 'mean_loss': 1.545, 'mean_rank': 5.215, 'mrr': 0.7212, 'train_accuracy': 0.6263}
+[ time:8704.0s total_exs:614144 epochs:6.14 ] {'exs': 3072, 'lr': 5.12e-07, 'total_train_updates': 2393, 'gnorm': 3939.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4711.0, 'mean_loss': 1.534, 'mean_rank': 5.102, 'mrr': 0.7215, 'train_accuracy': 0.6305}
+[ time:8724.0s total_exs:616960 epochs:6.17 ] {'exs': 2816, 'lr': 5.12e-07, 'total_train_updates': 2404, 'gnorm': 3866.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4348.0, 'mean_loss': 1.544, 'mean_rank': 5.137, 'mrr': 0.7216, 'train_accuracy': 0.6314}
+[ time:8744.0s total_exs:619776 epochs:6.2 ] {'exs': 2816, 'lr': 5.12e-07, 'total_train_updates': 2415, 'gnorm': 4020.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4447.0, 'mean_loss': 1.579, 'mean_rank': 4.884, 'mrr': 0.7127, 'train_accuracy': 0.6158}
+[ time:8766.0s total_exs:622848 epochs:6.23 ] {'exs': 3072, 'lr': 5.12e-07, 'total_train_updates': 2427, 'gnorm': 3964.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4675.0, 'mean_loss': 1.522, 'mean_rank': 5.076, 'mrr': 0.728, 'train_accuracy': 0.6364}
+[ time:8787.0s total_exs:625920 epochs:6.26 ] {'exs': 3072, 'lr': 5.12e-07, 'total_train_updates': 2439, 'gnorm': 3932.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4718.0, 'mean_loss': 1.536, 'mean_rank': 5.001, 'mrr': 0.7165, 'train_accuracy': 0.6191}
+[ time:8808.0s total_exs:628736 epochs:6.29 ] {'exs': 2816, 'lr': 5.12e-07, 'total_train_updates': 2450, 'gnorm': 3963.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4510.0, 'mean_loss': 1.602, 'mean_rank': 5.441, 'mrr': 0.7121, 'train_accuracy': 0.62}
+[ time:8830.0s total_exs:631808 epochs:6.32 ] {'exs': 3072, 'lr': 5.12e-07, 'total_train_updates': 2462, 'gnorm': 3979.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4753.0, 'mean_loss': 1.547, 'mean_rank': 4.956, 'mrr': 0.7183, 'train_accuracy': 0.6266}
+[ time:8850.0s total_exs:634624 epochs:6.35 ] {'exs': 2816, 'lr': 5.12e-07, 'total_train_updates': 2473, 'gnorm': 3834.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4272.0, 'mean_loss': 1.517, 'mean_rank': 4.811, 'mrr': 0.728, 'train_accuracy': 0.6357}
+[ time:8871.0s total_exs:637696 epochs:6.38 ] {'exs': 3072, 'lr': 5.12e-07, 'total_train_updates': 2485, 'gnorm': 3898.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4632.0, 'mean_loss': 1.508, 'mean_rank': 4.795, 'mrr': 0.724, 'train_accuracy': 0.6315}
+[ time:8893.0s total_exs:640768 epochs:6.41 ] {'exs': 3072, 'lr': 5.12e-07, 'total_train_updates': 2497, 'gnorm': 3879.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4786.0, 'mean_loss': 1.558, 'mean_rank': 5.227, 'mrr': 0.7155, 'train_accuracy': 0.6204}
+[ time:8913.0s total_exs:643584 epochs:6.44 ] {'exs': 2816, 'lr': 5.12e-07, 'total_train_updates': 2508, 'gnorm': 3851.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4323.0, 'mean_loss': 1.535, 'mean_rank': 5.027, 'mrr': 0.7207, 'train_accuracy': 0.6286}
+[ time:8933.0s total_exs:646400 epochs:6.46 ] {'exs': 2816, 'lr': 5.12e-07, 'total_train_updates': 2519, 'gnorm': 3892.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4412.0, 'mean_loss': 1.567, 'mean_rank': 5.292, 'mrr': 0.7176, 'train_accuracy': 0.6278}
+[ time:8955.0s total_exs:649472 epochs:6.49 ] {'exs': 3072, 'lr': 5.12e-07, 'total_train_updates': 2531, 'gnorm': 3928.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4853.0, 'mean_loss': 1.58, 'mean_rank': 5.425, 'mrr': 0.7116, 'train_accuracy': 0.6172}
+[ running eval: valid ]
+[ eval completed in 347.77s ]
+valid:{'exs': 5000, 'accuracy': 0.5636, 'f1': 0.5798, 'hits@1': 0.564, 'hits@5': 0.79, 'hits@10': 0.867, 'hits@50': 0.984, 'hits@100': 1.0, 'bleu-4': 0.4936, 'lr': 5.12e-07, 'total_train_updates': 2542, 'gpu_mem_percent': 0.755, 'examples': 5000, 'loss': 9639.0, 'mean_loss': 1.928, 'mean_rank': 5.492, 'mrr': 0.6641}
+[ saving model checkpoint: ./model/poly_dstc7_model.checkpoint ]
+Epoch    12: reducing learning rate of group 0 to 2.0480e-07.
+[ new best accuracy: 0.5636 (previous best was 0.5634) ]
+[ saving best valid model: ./model/poly_dstc7_model ]
+[ saving best valid metric: ./model/poly_dstc7_model.best_valid ]
+[ time:9336.0s total_exs:652544 epochs:6.53 ] {'exs': 3072, 'lr': 2.048e-07, 'total_train_updates': 2543, 'gnorm': 3788.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 256, 'loss': 414.9, 'mean_loss': 1.621, 'mean_rank': 5.734, 'mrr': 0.6864, 'train_accuracy': 0.5742}
+[ time:9358.0s total_exs:655616 epochs:6.56 ] {'exs': 3072, 'lr': 2.048e-07, 'total_train_updates': 2555, 'gnorm': 4035.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4690.0, 'mean_loss': 1.527, 'mean_rank': 4.829, 'mrr': 0.7249, 'train_accuracy': 0.6257}
+[ time:9378.0s total_exs:658432 epochs:6.58 ] {'exs': 2816, 'lr': 2.048e-07, 'total_train_updates': 2566, 'gnorm': 3949.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4378.0, 'mean_loss': 1.555, 'mean_rank': 5.077, 'mrr': 0.7188, 'train_accuracy': 0.6275}
+[ time:9398.0s total_exs:661248 epochs:6.61 ] {'exs': 2816, 'lr': 2.048e-07, 'total_train_updates': 2577, 'gnorm': 4032.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4526.0, 'mean_loss': 1.607, 'mean_rank': 5.444, 'mrr': 0.7078, 'train_accuracy': 0.6143}
+[ time:9419.0s total_exs:664320 epochs:6.64 ] {'exs': 3072, 'lr': 2.048e-07, 'total_train_updates': 2589, 'gnorm': 4066.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4984.0, 'mean_loss': 1.623, 'mean_rank': 5.366, 'mrr': 0.7084, 'train_accuracy': 0.613}
+[ time:9442.0s total_exs:667392 epochs:6.67 ] {'exs': 3072, 'lr': 2.048e-07, 'total_train_updates': 2601, 'gnorm': 3969.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4889.0, 'mean_loss': 1.591, 'mean_rank': 5.382, 'mrr': 0.7134, 'train_accuracy': 0.6188}
+[ time:9463.0s total_exs:670464 epochs:6.7 ] {'exs': 3072, 'lr': 2.048e-07, 'total_train_updates': 2613, 'gnorm': 3908.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4721.0, 'mean_loss': 1.537, 'mean_rank': 5.177, 'mrr': 0.7231, 'train_accuracy': 0.6315}
+[ time:9483.0s total_exs:673280 epochs:6.73 ] {'exs': 2816, 'lr': 2.048e-07, 'total_train_updates': 2624, 'gnorm': 3876.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4236.0, 'mean_loss': 1.504, 'mean_rank': 5.137, 'mrr': 0.7303, 'train_accuracy': 0.6435}
+[ time:9503.0s total_exs:676096 epochs:6.76 ] {'exs': 2816, 'lr': 2.048e-07, 'total_train_updates': 2635, 'gnorm': 4165.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4383.0, 'mean_loss': 1.556, 'mean_rank': 5.3, 'mrr': 0.7228, 'train_accuracy': 0.6282}
+[ time:9525.0s total_exs:679168 epochs:6.79 ] {'exs': 3072, 'lr': 2.048e-07, 'total_train_updates': 2647, 'gnorm': 4059.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4789.0, 'mean_loss': 1.559, 'mean_rank': 5.031, 'mrr': 0.7168, 'train_accuracy': 0.625}
+[ time:9546.0s total_exs:682240 epochs:6.82 ] {'exs': 3072, 'lr': 2.048e-07, 'total_train_updates': 2659, 'gnorm': 3968.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4843.0, 'mean_loss': 1.576, 'mean_rank': 5.094, 'mrr': 0.7136, 'train_accuracy': 0.6195}
+[ time:9566.0s total_exs:685056 epochs:6.85 ] {'exs': 2816, 'lr': 2.048e-07, 'total_train_updates': 2670, 'gnorm': 4019.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4476.0, 'mean_loss': 1.59, 'mean_rank': 5.458, 'mrr': 0.7124, 'train_accuracy': 0.6207}
+[ time:9588.0s total_exs:688128 epochs:6.88 ] {'exs': 3072, 'lr': 2.048e-07, 'total_train_updates': 2682, 'gnorm': 4010.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4685.0, 'mean_loss': 1.525, 'mean_rank': 4.989, 'mrr': 0.7241, 'train_accuracy': 0.6309}
+[ time:9609.0s total_exs:691200 epochs:6.91 ] {'exs': 3072, 'lr': 2.048e-07, 'total_train_updates': 2694, 'gnorm': 4087.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4761.0, 'mean_loss': 1.55, 'mean_rank': 5.152, 'mrr': 0.7227, 'train_accuracy': 0.6312}
+[ time:9632.0s total_exs:694272 epochs:6.94 ] {'exs': 3072, 'lr': 2.048e-07, 'total_train_updates': 2706, 'gnorm': 3908.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4919.0, 'mean_loss': 1.601, 'mean_rank': 5.512, 'mrr': 0.7088, 'train_accuracy': 0.6117}
+[ time:9653.0s total_exs:697344 epochs:6.97 ] {'exs': 3072, 'lr': 2.048e-07, 'total_train_updates': 2718, 'gnorm': 3977.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4787.0, 'mean_loss': 1.558, 'mean_rank': 4.92, 'mrr': 0.7142, 'train_accuracy': 0.6149}
+[ time:9673.0s total_exs:700160 epochs:7.0 ] {'exs': 2816, 'lr': 2.048e-07, 'total_train_updates': 2729, 'gnorm': 4187.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4498.0, 'mean_loss': 1.597, 'mean_rank': 5.301, 'mrr': 0.71, 'train_accuracy': 0.614}
+[ running eval: valid ]
+[ eval completed in 348.48s ]
+valid:{'exs': 5000, 'accuracy': 0.5628, 'f1': 0.5788, 'hits@1': 0.563, 'hits@5': 0.79, 'hits@10': 0.867, 'hits@50': 0.983, 'hits@100': 1.0, 'bleu-4': 0.493, 'lr': 2.048e-07, 'total_train_updates': 2737, 'gpu_mem_percent': 0.755, 'examples': 5000, 'loss': 9629.0, 'mean_loss': 1.926, 'mean_rank': 5.492, 'mrr': 0.6638}
+[ saving model checkpoint: ./model/poly_dstc7_model.checkpoint ]
+Epoch    13: reducing learning rate of group 0 to 8.1920e-08.
+[ did not beat best accuracy: 0.5636 impatience: 1 ]
+[ time:10047.0s total_exs:702720 epochs:7.03 ] {'exs': 2208, 'lr': 8.192e-08, 'total_train_updates': 2738, 'gnorm': 3833.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 256, 'loss': 395.0, 'mean_loss': 1.543, 'mean_rank': 5.191, 'mrr': 0.7174, 'train_accuracy': 0.6367}
+[ time:10067.0s total_exs:705536 epochs:7.06 ] {'exs': 2816, 'lr': 8.192e-08, 'total_train_updates': 2749, 'gnorm': 3862.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4346.0, 'mean_loss': 1.543, 'mean_rank': 5.148, 'mrr': 0.7176, 'train_accuracy': 0.6229}
+[ time:10089.0s total_exs:708608 epochs:7.09 ] {'exs': 3072, 'lr': 8.192e-08, 'total_train_updates': 2761, 'gnorm': 4052.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4826.0, 'mean_loss': 1.571, 'mean_rank': 5.001, 'mrr': 0.7151, 'train_accuracy': 0.6178}
+[ time:10110.0s total_exs:711680 epochs:7.12 ] {'exs': 3072, 'lr': 8.192e-08, 'total_train_updates': 2773, 'gnorm': 3955.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4833.0, 'mean_loss': 1.573, 'mean_rank': 5.267, 'mrr': 0.7151, 'train_accuracy': 0.6191}
+[ time:10130.0s total_exs:714496 epochs:7.14 ] {'exs': 2816, 'lr': 8.192e-08, 'total_train_updates': 2784, 'gnorm': 3950.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4495.0, 'mean_loss': 1.596, 'mean_rank': 5.503, 'mrr': 0.7112, 'train_accuracy': 0.6165}
+[ time:10150.0s total_exs:717312 epochs:7.17 ] {'exs': 2816, 'lr': 8.192e-08, 'total_train_updates': 2795, 'gnorm': 3870.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4210.0, 'mean_loss': 1.495, 'mean_rank': 4.896, 'mrr': 0.7261, 'train_accuracy': 0.6339}
+[ time:10172.0s total_exs:720384 epochs:7.2 ] {'exs': 3072, 'lr': 8.192e-08, 'total_train_updates': 2807, 'gnorm': 3922.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4784.0, 'mean_loss': 1.557, 'mean_rank': 4.88, 'mrr': 0.7174, 'train_accuracy': 0.6234}
+[ time:10193.0s total_exs:723456 epochs:7.23 ] {'exs': 3072, 'lr': 8.192e-08, 'total_train_updates': 2819, 'gnorm': 4083.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4940.0, 'mean_loss': 1.608, 'mean_rank': 5.591, 'mrr': 0.7113, 'train_accuracy': 0.6175}
+[ time:10215.0s total_exs:726528 epochs:7.27 ] {'exs': 3072, 'lr': 8.192e-08, 'total_train_updates': 2831, 'gnorm': 3980.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4903.0, 'mean_loss': 1.596, 'mean_rank': 5.258, 'mrr': 0.7129, 'train_accuracy': 0.6198}
+[ time:10236.0s total_exs:729344 epochs:7.29 ] {'exs': 2816, 'lr': 8.192e-08, 'total_train_updates': 2842, 'gnorm': 3864.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4236.0, 'mean_loss': 1.504, 'mean_rank': 4.899, 'mrr': 0.7295, 'train_accuracy': 0.6417}
+[ time:10257.0s total_exs:732416 epochs:7.32 ] {'exs': 3072, 'lr': 8.192e-08, 'total_train_updates': 2854, 'gnorm': 4022.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4717.0, 'mean_loss': 1.536, 'mean_rank': 5.044, 'mrr': 0.7214, 'train_accuracy': 0.6263}
+[ time:10277.0s total_exs:735232 epochs:7.35 ] {'exs': 2816, 'lr': 8.192e-08, 'total_train_updates': 2865, 'gnorm': 3894.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4426.0, 'mean_loss': 1.572, 'mean_rank': 5.263, 'mrr': 0.7146, 'train_accuracy': 0.6147}
+[ time:10297.0s total_exs:738048 epochs:7.38 ] {'exs': 2816, 'lr': 8.192e-08, 'total_train_updates': 2876, 'gnorm': 3941.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4356.0, 'mean_loss': 1.547, 'mean_rank': 4.962, 'mrr': 0.7163, 'train_accuracy': 0.6183}
+[ time:10318.0s total_exs:740864 epochs:7.41 ] {'exs': 2816, 'lr': 8.192e-08, 'total_train_updates': 2887, 'gnorm': 4515.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4407.0, 'mean_loss': 1.565, 'mean_rank': 4.805, 'mrr': 0.7117, 'train_accuracy': 0.6161}
+[ time:10338.0s total_exs:743680 epochs:7.44 ] {'exs': 2816, 'lr': 8.192e-08, 'total_train_updates': 2898, 'gnorm': 3961.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 2816, 'loss': 4515.0, 'mean_loss': 1.603, 'mean_rank': 5.227, 'mrr': 0.7124, 'train_accuracy': 0.6222}
+[ time:10360.0s total_exs:746752 epochs:7.47 ] {'exs': 3072, 'lr': 8.192e-08, 'total_train_updates': 2910, 'gnorm': 3877.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4731.0, 'mean_loss': 1.54, 'mean_rank': 5.018, 'mrr': 0.7207, 'train_accuracy': 0.6263}
+[ time:10382.0s total_exs:749824 epochs:7.5 ] {'exs': 3072, 'lr': 8.192e-08, 'total_train_updates': 2922, 'gnorm': 3848.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4742.0, 'mean_loss': 1.544, 'mean_rank': 5.145, 'mrr': 0.7209, 'train_accuracy': 0.6283}
+[ running eval: valid ]
+[ eval completed in 340.82s ]
+valid:{'exs': 5000, 'accuracy': 0.5632, 'f1': 0.5793, 'hits@1': 0.563, 'hits@5': 0.79, 'hits@10': 0.867, 'hits@50': 0.983, 'hits@100': 1.0, 'bleu-4': 0.4934, 'lr': 8.192e-08, 'total_train_updates': 2933, 'gpu_mem_percent': 0.755, 'examples': 5000, 'loss': 9628.0, 'mean_loss': 1.926, 'mean_rank': 5.491, 'mrr': 0.6639}
+[ saving model checkpoint: ./model/poly_dstc7_model.checkpoint ]
+Epoch    14: reducing learning rate of group 0 to 3.2768e-08.
+[ did not beat best accuracy: 0.5636 impatience: 2 ]
+[ time:10749.0s total_exs:752896 epochs:7.53 ] {'exs': 3072, 'lr': 3.277e-08, 'total_train_updates': 2934, 'gnorm': 3952.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 256, 'loss': 397.7, 'mean_loss': 1.553, 'mean_rank': 5.344, 'mrr': 0.7217, 'train_accuracy': 0.6367}
+[ time:10770.0s total_exs:755968 epochs:7.56 ] {'exs': 3072, 'lr': 3.277e-08, 'total_train_updates': 2946, 'gnorm': 3868.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4550.0, 'mean_loss': 1.481, 'mean_rank': 4.704, 'mrr': 0.7274, 'train_accuracy': 0.6322}
+[ time:10791.0s total_exs:759040 epochs:7.59 ] {'exs': 3072, 'lr': 3.277e-08, 'total_train_updates': 2958, 'gnorm': 3986.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4896.0, 'mean_loss': 1.594, 'mean_rank': 5.302, 'mrr': 0.7127, 'train_accuracy': 0.6178}
+[ time:10812.0s total_exs:762112 epochs:7.62 ] {'exs': 3072, 'lr': 3.277e-08, 'total_train_updates': 2970, 'gnorm': 3905.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4646.0, 'mean_loss': 1.512, 'mean_rank': 4.902, 'mrr': 0.7271, 'train_accuracy': 0.6364}
+[ time:10833.0s total_exs:765184 epochs:7.65 ] {'exs': 3072, 'lr': 3.277e-08, 'total_train_updates': 2982, 'gnorm': 3898.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4777.0, 'mean_loss': 1.555, 'mean_rank': 5.32, 'mrr': 0.7194, 'train_accuracy': 0.6283}
+[ time:10854.0s total_exs:768256 epochs:7.68 ] {'exs': 3072, 'lr': 3.277e-08, 'total_train_updates': 2994, 'gnorm': 3992.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4802.0, 'mean_loss': 1.563, 'mean_rank': 5.16, 'mrr': 0.7201, 'train_accuracy': 0.6273}
+[ time:10876.0s total_exs:771328 epochs:7.71 ] {'exs': 3072, 'lr': 3.277e-08, 'total_train_updates': 3006, 'gnorm': 3861.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4394.0, 'mean_loss': 1.43, 'mean_rank': 4.358, 'mrr': 0.7372, 'train_accuracy': 0.6442}
+[ time:10897.0s total_exs:774400 epochs:7.74 ] {'exs': 3072, 'lr': 3.277e-08, 'total_train_updates': 3018, 'gnorm': 3908.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4966.0, 'mean_loss': 1.616, 'mean_rank': 5.547, 'mrr': 0.704, 'train_accuracy': 0.6064}
+[ time:10918.0s total_exs:777472 epochs:7.77 ] {'exs': 3072, 'lr': 3.277e-08, 'total_train_updates': 3030, 'gnorm': 3946.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4770.0, 'mean_loss': 1.553, 'mean_rank': 5.097, 'mrr': 0.7203, 'train_accuracy': 0.6273}
+[ time:10939.0s total_exs:780544 epochs:7.81 ] {'exs': 3072, 'lr': 3.277e-08, 'total_train_updates': 3042, 'gnorm': 4029.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4683.0, 'mean_loss': 1.524, 'mean_rank': 5.112, 'mrr': 0.7217, 'train_accuracy': 0.6296}
+[ time:10961.0s total_exs:783616 epochs:7.84 ] {'exs': 3072, 'lr': 3.277e-08, 'total_train_updates': 3054, 'gnorm': 4041.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4853.0, 'mean_loss': 1.58, 'mean_rank': 5.253, 'mrr': 0.7111, 'train_accuracy': 0.6146}
+[ time:10983.0s total_exs:786688 epochs:7.87 ] {'exs': 3072, 'lr': 3.277e-08, 'total_train_updates': 3066, 'gnorm': 4016.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4919.0, 'mean_loss': 1.601, 'mean_rank': 5.472, 'mrr': 0.7155, 'train_accuracy': 0.6227}
+[ time:11004.0s total_exs:789760 epochs:7.9 ] {'exs': 3072, 'lr': 3.277e-08, 'total_train_updates': 3078, 'gnorm': 3903.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4794.0, 'mean_loss': 1.561, 'mean_rank': 5.413, 'mrr': 0.7233, 'train_accuracy': 0.6338}
+[ time:11025.0s total_exs:792832 epochs:7.93 ] {'exs': 3072, 'lr': 3.277e-08, 'total_train_updates': 3090, 'gnorm': 4123.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4632.0, 'mean_loss': 1.508, 'mean_rank': 4.702, 'mrr': 0.7224, 'train_accuracy': 0.6299}
+[ time:11046.0s total_exs:795904 epochs:7.96 ] {'exs': 3072, 'lr': 3.277e-08, 'total_train_updates': 3102, 'gnorm': 3976.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4902.0, 'mean_loss': 1.596, 'mean_rank': 5.191, 'mrr': 0.7096, 'train_accuracy': 0.6159}
+[ time:11067.0s total_exs:798976 epochs:7.99 ] {'exs': 3072, 'lr': 3.277e-08, 'total_train_updates': 3114, 'gnorm': 3810.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4723.0, 'mean_loss': 1.537, 'mean_rank': 5.239, 'mrr': 0.7233, 'train_accuracy': 0.6374}
+[ time:11088.0s total_exs:802048 epochs:8.02 ] {'exs': 3072, 'lr': 3.277e-08, 'total_train_updates': 3126, 'gnorm': 4404.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4851.0, 'mean_loss': 1.579, 'mean_rank': 4.977, 'mrr': 0.7223, 'train_accuracy': 0.6322}
+[ running eval: valid ]
+[ eval completed in 338.98s ]
+valid:{'exs': 5000, 'accuracy': 0.563, 'f1': 0.5791, 'hits@1': 0.563, 'hits@5': 0.79, 'hits@10': 0.867, 'hits@50': 0.983, 'hits@100': 1.0, 'bleu-4': 0.4934, 'lr': 3.277e-08, 'total_train_updates': 3128, 'gpu_mem_percent': 0.755, 'examples': 5000, 'loss': 9629.0, 'mean_loss': 1.926, 'mean_rank': 5.488, 'mrr': 0.664}
+[ saving model checkpoint: ./model/poly_dstc7_model.checkpoint ]
+Epoch    15: reducing learning rate of group 0 to 1.3107e-08.
+[ did not beat best accuracy: 0.5636 impatience: 3 ]
+[ time:11440.0s total_exs:803072 epochs:8.03 ] {'exs': 672, 'lr': 1.311e-08, 'total_train_updates': 3129, 'gnorm': 4044.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 256, 'loss': 408.5, 'mean_loss': 1.596, 'mean_rank': 5.18, 'mrr': 0.7247, 'train_accuracy': 0.6367}
+[ time:11461.0s total_exs:806144 epochs:8.06 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3141, 'gnorm': 3938.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4911.0, 'mean_loss': 1.599, 'mean_rank': 5.67, 'mrr': 0.7081, 'train_accuracy': 0.6146}
+[ time:11482.0s total_exs:809216 epochs:8.09 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3153, 'gnorm': 4104.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4828.0, 'mean_loss': 1.572, 'mean_rank': 5.2, 'mrr': 0.7149, 'train_accuracy': 0.6221}
+[ time:11503.0s total_exs:812288 epochs:8.12 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3165, 'gnorm': 3880.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4672.0, 'mean_loss': 1.521, 'mean_rank': 5.202, 'mrr': 0.7209, 'train_accuracy': 0.6292}
+[ time:11524.0s total_exs:815360 epochs:8.15 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3177, 'gnorm': 4008.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4669.0, 'mean_loss': 1.52, 'mean_rank': 4.561, 'mrr': 0.7245, 'train_accuracy': 0.6328}
+[ time:11545.0s total_exs:818432 epochs:8.18 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3189, 'gnorm': 3983.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4710.0, 'mean_loss': 1.533, 'mean_rank': 4.733, 'mrr': 0.7179, 'train_accuracy': 0.6198}
+[ time:11566.0s total_exs:821504 epochs:8.22 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3201, 'gnorm': 3860.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4617.0, 'mean_loss': 1.503, 'mean_rank': 4.814, 'mrr': 0.7256, 'train_accuracy': 0.6344}
+[ time:11587.0s total_exs:824576 epochs:8.25 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3213, 'gnorm': 3969.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4677.0, 'mean_loss': 1.523, 'mean_rank': 4.906, 'mrr': 0.7226, 'train_accuracy': 0.6299}
+[ time:11608.0s total_exs:827648 epochs:8.28 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3225, 'gnorm': 3960.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4769.0, 'mean_loss': 1.552, 'mean_rank': 5.068, 'mrr': 0.7185, 'train_accuracy': 0.6266}
+[ time:11628.0s total_exs:830720 epochs:8.31 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3237, 'gnorm': 3952.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4726.0, 'mean_loss': 1.538, 'mean_rank': 4.706, 'mrr': 0.7192, 'train_accuracy': 0.6221}
+[ time:11650.0s total_exs:833792 epochs:8.34 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3249, 'gnorm': 4175.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4735.0, 'mean_loss': 1.541, 'mean_rank': 4.712, 'mrr': 0.7184, 'train_accuracy': 0.6243}
+[ time:11671.0s total_exs:836864 epochs:8.37 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3261, 'gnorm': 3899.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4768.0, 'mean_loss': 1.552, 'mean_rank': 5.24, 'mrr': 0.7172, 'train_accuracy': 0.6243}
+[ time:11692.0s total_exs:839936 epochs:8.4 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3273, 'gnorm': 3988.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4829.0, 'mean_loss': 1.572, 'mean_rank': 5.625, 'mrr': 0.7149, 'train_accuracy': 0.6243}
+[ time:11714.0s total_exs:843008 epochs:8.43 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3285, 'gnorm': 3875.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4674.0, 'mean_loss': 1.521, 'mean_rank': 5.245, 'mrr': 0.7272, 'train_accuracy': 0.6351}
+[ time:11735.0s total_exs:846080 epochs:8.46 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3297, 'gnorm': 3885.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4892.0, 'mean_loss': 1.592, 'mean_rank': 5.524, 'mrr': 0.7125, 'train_accuracy': 0.624}
+[ time:11756.0s total_exs:849152 epochs:8.49 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3309, 'gnorm': 3963.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4752.0, 'mean_loss': 1.547, 'mean_rank': 4.872, 'mrr': 0.7195, 'train_accuracy': 0.6234}
+[ time:11776.0s total_exs:852224 epochs:8.52 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3321, 'gnorm': 3848.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4817.0, 'mean_loss': 1.568, 'mean_rank': 5.39, 'mrr': 0.7154, 'train_accuracy': 0.6224}
+[ running eval: valid ]
+[ eval completed in 335.74s ]
+valid:{'exs': 5000, 'accuracy': 0.563, 'f1': 0.5792, 'hits@1': 0.563, 'hits@5': 0.79, 'hits@10': 0.867, 'hits@50': 0.983, 'hits@100': 1.0, 'bleu-4': 0.4934, 'lr': 1.311e-08, 'total_train_updates': 3324, 'gpu_mem_percent': 0.755, 'examples': 5000, 'loss': 9629.0, 'mean_loss': 1.926, 'mean_rank': 5.488, 'mrr': 0.664}
+[ saving model checkpoint: ./model/poly_dstc7_model.checkpoint ]
+[ did not beat best accuracy: 0.5636 impatience: 4 ]
+[ time:12125.0s total_exs:853248 epochs:8.53 ] {'exs': 1024, 'lr': 1.311e-08, 'total_train_updates': 3325, 'gnorm': 4037.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 256, 'loss': 437.8, 'mean_loss': 1.71, 'mean_rank': 6.223, 'mrr': 0.6893, 'train_accuracy': 0.5898}
+[ time:12147.0s total_exs:856320 epochs:8.56 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3337, 'gnorm': 3937.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4673.0, 'mean_loss': 1.521, 'mean_rank': 4.9, 'mrr': 0.7204, 'train_accuracy': 0.6247}
+[ time:12167.0s total_exs:859392 epochs:8.59 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3349, 'gnorm': 3954.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4714.0, 'mean_loss': 1.535, 'mean_rank': 4.97, 'mrr': 0.721, 'train_accuracy': 0.6276}
+[ time:12188.0s total_exs:862464 epochs:8.62 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3361, 'gnorm': 3979.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4737.0, 'mean_loss': 1.542, 'mean_rank': 4.974, 'mrr': 0.7172, 'train_accuracy': 0.6214}
+[ time:12210.0s total_exs:865536 epochs:8.66 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3373, 'gnorm': 3882.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4675.0, 'mean_loss': 1.522, 'mean_rank': 5.182, 'mrr': 0.7271, 'train_accuracy': 0.6357}
+[ time:12231.0s total_exs:868608 epochs:8.69 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3385, 'gnorm': 3899.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4727.0, 'mean_loss': 1.539, 'mean_rank': 5.018, 'mrr': 0.7174, 'train_accuracy': 0.6208}
+[ time:12251.0s total_exs:871680 epochs:8.72 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3397, 'gnorm': 3987.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4823.0, 'mean_loss': 1.57, 'mean_rank': 5.108, 'mrr': 0.7156, 'train_accuracy': 0.6214}
+[ time:12272.0s total_exs:874752 epochs:8.75 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3409, 'gnorm': 4165.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4910.0, 'mean_loss': 1.598, 'mean_rank': 5.378, 'mrr': 0.706, 'train_accuracy': 0.6074}
+[ time:12293.0s total_exs:877824 epochs:8.78 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3421, 'gnorm': 3933.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4882.0, 'mean_loss': 1.589, 'mean_rank': 4.969, 'mrr': 0.7106, 'train_accuracy': 0.6136}
+[ time:12314.0s total_exs:880896 epochs:8.81 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3433, 'gnorm': 3970.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4780.0, 'mean_loss': 1.556, 'mean_rank': 5.136, 'mrr': 0.7199, 'train_accuracy': 0.6296}
+[ time:12335.0s total_exs:883968 epochs:8.84 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3445, 'gnorm': 3987.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4871.0, 'mean_loss': 1.585, 'mean_rank': 5.524, 'mrr': 0.7156, 'train_accuracy': 0.6178}
+[ time:12356.0s total_exs:887040 epochs:8.87 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3457, 'gnorm': 3863.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4582.0, 'mean_loss': 1.492, 'mean_rank': 4.788, 'mrr': 0.7299, 'train_accuracy': 0.637}
+[ time:12377.0s total_exs:890112 epochs:8.9 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3469, 'gnorm': 3932.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4612.0, 'mean_loss': 1.501, 'mean_rank': 4.831, 'mrr': 0.7297, 'train_accuracy': 0.6383}
+[ time:12398.0s total_exs:893184 epochs:8.93 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3481, 'gnorm': 4057.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4935.0, 'mean_loss': 1.607, 'mean_rank': 5.479, 'mrr': 0.7101, 'train_accuracy': 0.6126}
+[ time:12419.0s total_exs:896256 epochs:8.96 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3493, 'gnorm': 4002.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4855.0, 'mean_loss': 1.58, 'mean_rank': 5.282, 'mrr': 0.709, 'train_accuracy': 0.6117}
+[ time:12440.0s total_exs:899328 epochs:8.99 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3505, 'gnorm': 3945.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4925.0, 'mean_loss': 1.603, 'mean_rank': 5.373, 'mrr': 0.7093, 'train_accuracy': 0.6094}
+[ time:12461.0s total_exs:902400 epochs:9.02 ] {'exs': 3072, 'lr': 1.311e-08, 'total_train_updates': 3517, 'gnorm': 3906.0, 'clip': 1.0, 'gpu_mem_percent': 0.755, 'examples': 3072, 'loss': 4750.0, 'mean_loss': 1.546, 'mean_rank': 5.245, 'mrr': 0.7225, 'train_accuracy': 0.6361}
+[ running eval: valid ]
+[ eval completed in 341.33s ]
+valid:{'exs': 5000, 'accuracy': 0.5632, 'f1': 0.5794, 'hits@1': 0.563, 'hits@5': 0.79, 'hits@10': 0.867, 'hits@50': 0.983, 'hits@100': 1.0, 'bleu-4': 0.4934, 'lr': 1.311e-08, 'total_train_updates': 3519, 'gpu_mem_percent': 0.755, 'examples': 5000, 'loss': 9629.0, 'mean_loss': 1.926, 'mean_rank': 5.489, 'mrr': 0.6641}
+[ saving model checkpoint: ./model/poly_dstc7_model.checkpoint ]
+[ did not beat best accuracy: 0.5636 impatience: 5 ]
+[ ran out of patience! stopping training. ]
+[ warning: overriding opt['init_model'] to zoo:pretrained_transformers/poly_model_huge_reddit/model (previously: /lustre/home/acct-eezql/eezql/angel/ParlAI/data/models/pretrained_transformers/poly_model_huge_reddit/model )]
+
+***************************************************************************
+[ WARNING ] : your model is being loaded with opts that do not exist in the model you are initializing the weights with: evaltask: None,eval_batchsize: 10,display_examples: False,num_epochs: -1,max_train_time: -1,validation_every_n_secs: -1,save_every_n_secs: -1,save_after_valid: True,validation_every_n_epochs: 0.5,validation_max_exs: -1,short_final_eval: False,validation_patience: 5,validation_metric: accuracy,validation_metric_mode: max,validation_cutoff: 1.0,load_from_checkpoint: False,validation_share_agent: False,aggregate_micro: False,metrics: default,tensorboard_log: False,pytorch_teacher_task: dstc7,pytorch_teacher_dataset: None,pytorch_datapath: None,numworkers: 4,pytorch_preprocess: False,pytorch_teacher_batch_sort: False,batch_sort_cache_type: pop,batch_length_range: 5,shuffle: False,batch_sort_field: text,pytorch_context_length: -1,pytorch_include_labels: True,dict_maxexs: -1,dict_include_valid: False,dict_include_test: False,log_every_n_secs: 20.0,adam_eps: 1e-08,encode_candidate_vecs_batchsize: 256,rank_top_k: -1,inference: max,topk: 5,polyencoder_attention_keys: context,interactive_mode: False
+
+***************************************************************************
+[ WARNING ] : your model is being loaded with opts that differ from the model you are initializing the weights with. Add the following args to your run command to change this: 
+
+--task convai2 --download-path /private/home/edinan/ParlAI/downloads --batchsize 2 --datapath /private/home/edinan/ParlAI/data --single-turn False --fp16 True --encode-candidate-vecs False --share-word-embeddings True --polyencoder-type n-first --parlai-home /private/home/edinan/ParlAI
+***************************************************************************
+[ Using CUDA ]
+Dictionary: loading dictionary from ./model/poly_dstc7_model.dict
+[ num words =  54944 ]
+Total parameters: 256131072
+Trainable parameters:  256131072
+Loading existing model parameters from ./model/poly_dstc7_model
+[creating task(s): dstc7]
+[ running eval: valid ]
+[ eval completed in 342.88s ]
+valid:{'exs': 5000, 'accuracy': 0.5636, 'f1': 0.5798, 'hits@1': 0.564, 'hits@5': 0.79, 'hits@10': 0.867, 'hits@50': 0.984, 'hits@100': 1.0, 'bleu-4': 0.4936, 'lr': 2.048e-07, 'total_train_updates': 2542, 'gpu_mem_percent': 0.766, 'examples': 5000, 'loss': 9639.0, 'mean_loss': 1.928, 'mean_rank': 5.492, 'mrr': 0.6641}
+[creating task(s): dstc7]
+[ running eval: test ]
+[ eval completed in 67.85s ]
+test:{'exs': 1000, 'accuracy': 0.641, 'f1': 0.6609, 'hits@1': 0.641, 'hits@5': 0.826, 'hits@10': 0.889, 'hits@50': 0.985, 'hits@100': 1.0, 'bleu-4': 0.611, 'lr': 2.048e-07, 'total_train_updates': 2542, 'gpu_mem_percent': 0.766, 'examples': 1000, 'loss': 1580.0, 'mean_loss': 1.58, 'mean_rank': 4.904, 'mrr': 0.727}
